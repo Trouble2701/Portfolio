@@ -1,0 +1,29 @@
+div {
+    width: 30px;
+    height: 312px;
+    position: relative;
+
+    .scrollDown {
+        position: absolute;
+        height: 48px;
+
+        .outside {
+            position: absolute;
+        }
+
+        .inside {
+            position: absolute;
+            left: 11px;
+            top: 17px;
+        }
+    }
+
+    .scrollDownLine {
+        width: 0;
+        height: 240px;
+        border: 1px solid #3DCFB6;
+        position: absolute;
+        bottom: 0;
+        left: 14.5px;
+    }
+}
