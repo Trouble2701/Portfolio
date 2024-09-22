@@ -1,0 +1,10 @@
+<div class="marquee">
+    <ngx-fast-marquee [speed]="70" direction="left" [pauseOnHover]="true" [autoFill]="true" [maskPercentage]="40" updated>
+        <div class="wrap">
+            @for(singleData of database.myInfo; track singleData; let i = $index){
+                <div [ngClass]="{'first' : i === 0 }">{{singleData}}</div>
+                <div class="dot"></div>
+            }
+        </div>
+    </ngx-fast-marquee>
+</div>
