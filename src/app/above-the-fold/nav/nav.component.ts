@@ -30,7 +30,7 @@ export class NavComponent {
 
   siteLangEN() {
     this.database.languarge = 'EN';
-    this.background.nativeElement.setAttribute('style', 'left: 0');
+    this.background.nativeElement.setAttribute('style', 'left: -1px');
   }
 
   siteLangDE() {

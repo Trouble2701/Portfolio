@@ -21,10 +21,17 @@ nav {
             display: flex;
             justify-content: center;
             align-items: center;
+            color: #3DCFB680;
             width: 84px !important;
             height: 28px;
             border: 1px solid #3DCFB6;
             border-radius: 100px;
+            transition: all 125ms ease-in-out;
+
+            &:hover{
+                border-color:#FFFFFF;
+                color: #3DCFB6;
+            }
     
     
             >div {
@@ -37,7 +44,6 @@ nav {
                 line-height: 19.2px;
                 width: 43px;
                 height: 30px;
-                color: #3DCFB680;
                 cursor: pointer;
                 transition: all 125ms ease-in-out;
                 position: relative;
@@ -54,7 +60,7 @@ nav {
             }
 
             .marker{
-                width: 42px;
+                width: 43px;
                 height: 30px;
                 position: absolute;
                 left: 0;
