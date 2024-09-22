@@ -39,11 +39,25 @@ nav {
                 height: 30px;
                 color: #3DCFB680;
                 cursor: pointer;
+                transition: all 125ms ease-in-out;
+                position: relative;
             }
     
             .marked{
                 color: #FFFFFF !important;
                 font-weight: 700;
+            }
+
+            .markedBackground{
+                width: 84px;
+                position: absolute;
+            }
+
+            .marker{
+                width: 42px;
+                height: 30px;
+                position: absolute;
+                left: 0;
                 background-color: #3DCFB6;
                 border-radius: 100px;
             }

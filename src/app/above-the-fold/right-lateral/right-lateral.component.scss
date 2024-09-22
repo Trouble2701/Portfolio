@@ -63,3 +63,29 @@ div {
         bottom: 0;
     }
 }
+
+.dotGit {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 8px;
+    height: 8px;
+    border-radius: 4px;
+    background-color: #3DCFB6;
+    position: absolute;
+    top: 13px;
+    left: 40px;
+}
+
+.dotLink{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 8px;
+    height: 8px;
+    border-radius: 4px;
+    background-color: #3DCFB6;
+    position: absolute;
+    top: 56px;
+    left: 40px;
+}

@@ -1,8 +1,11 @@
 <nav>
     <div class="menu">
         <div class="lang">
-            <div class="marked">EN</div>
-            <div>DE</div>
+            <div class="markedBackground">
+                <div class="marker" #background></div>
+            </div>
+            <div [ngClass]="{'marked' : database.languarge == 'EN'}" (click)="siteLangEN()">EN</div>
+            <div [ngClass]="{'marked' : database.languarge == 'DE'}" (click)="siteLangDE()">DE</div>
         </div>
         <div class="sitelinks">
             @for(navLinks of database.navBar; track navLinks; let i = $index){

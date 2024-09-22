@@ -3,8 +3,8 @@
         <a href="mailto:sven-plankenbichler@online.de">sven-plankenbichler&#64;online.de</a>
     </div>
     <div class="links">
-        <a href="https://github.com/Trouble2701?tab=repositories" title="My Github" target="_blank"><img src="assets/img/icons/Github.png"></a>
-        <a><img src="assets/img/icons/Linkedin.png" title="My Linkedin"></a>
+        <a href="https://github.com/Trouble2701?tab=repositories" title="My Github" target="_blank"><img #myGithub (mouseover)="changeGithubOn()" (mouseout)="changeGithubOff()" src="assets/img/icons/Github.png"> <div class="dotGit" #dotGit></div></a>
+        <a href="#"><img #myLinkedIn (mouseover)="changeLinkedInOn()" (mouseout)="changeLinkedInOff()" src="assets/img/icons/Linkedin.png" title="My Linkedin"> <div class="dotLink" #dotLink></div></a>
     </div>
     <div class="downLine"></div>
 </div>

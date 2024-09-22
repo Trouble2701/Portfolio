@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild, ElementRef, viewChild } from '@angular/core';
 
 @Component({
   selector: 'app-right-lateral',
@@ -9,4 +9,30 @@ import { Component } from '@angular/core';
 })
 export class RightLateralComponent {
 
+  @ViewChild('myGithub') myGithub: ElementRef | any;
+  @ViewChild('myLinkedIn') myLinkedIn: ElementRef | any;
+  @ViewChild('dotGit') dotGit: ElementRef | any;
+  @ViewChild('dotLink') dotLink: ElementRef | any;
+
+  constructor(){}
+
+  changeGithubOn(){
+    this.myGithub.nativeElement.src = 'assets/img/icons/GithubWhite.png';
+    this.dotGit.nativeElement.setAttribute('style', 'display:flex');
+  }
+
+  changeGithubOff(){
+    this.myGithub.nativeElement.src = 'assets/img/icons/Github.png';
+    this.dotGit.nativeElement.setAttribute('style', 'display:none');
+  }
+
+  changeLinkedInOn(){
+    this.myLinkedIn.nativeElement.src = 'assets/img/icons/LinkedinWhite.png';
+    this.dotLink.nativeElement.setAttribute('style', 'display:flex');
+  }
+
+  changeLinkedInOff(){
+    this.myLinkedIn.nativeElement.src = 'assets/img/icons/Linkedin.png';
+    this.dotLink.nativeElement.setAttribute('style', 'display:none');
+  }
 }
