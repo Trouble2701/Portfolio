@@ -67,7 +67,8 @@ nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            width: 301px;
+            gap: 45px;
+            width: 450px;
 
             >a {
                 text-decoration: none;
@@ -76,6 +77,7 @@ nav {
                 font-weight: 400;
                 font-size: 20px;
                 line-height: 26.24px;
+                text-wrap: nowrap;
             }
         }
     }
