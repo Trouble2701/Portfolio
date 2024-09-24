@@ -1,0 +1,49 @@
+div {
+    width: 1232px;
+    height: 708px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    top: 144px;
+
+    img {
+        width: 568px;
+        height: 568px;
+        border-radius: 30px;
+    }
+
+    .personInfo {
+        width: 568px;
+        height: 610px;
+        color: #3DCFB6;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 20px;
+
+        >span {
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            font-size: 24px;
+            font-family: 'Karla';
+            font-weight: 400;
+        }
+
+        .aboutMe {
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            width: 568px;
+            height: 562px;
+            border: 1px solid #3DCFB6;
+            border-radius: 30px;
+            padding: 32px;
+            gap: 40px;
+            background: #3DCFB61A;
+            position: relative;
+            top: 0;
+        }
+    }
+}
