@@ -6,32 +6,48 @@ import { inject, Injectable } from '@angular/core';
 
 export class DatabaseComponent {
 
+
+  datas =
+    [
+      {
+        myInfo: ['Frontend Entwickler', 'Wohne in Dresden', 'Remote Arbeiten'],
+        navBar: ['Über mich', 'Skills', 'Projekte'],
+        legalNotice: 'Impressum',
+        frontend: 'Frontend Entwickler',
+      },
+      {
+        myInfo: ['Frontend Developer', 'Based in Dresden', 'Available for remote work'],
+        navBar: ['About me', 'Skills', 'Projects'],
+        legalNotice: 'Legal Notice',
+        frontend: 'Frontend Developer',
+      }
+    ];
+
   languarge = 'DE';
-  myInfoEN = ['Frontend Developer', 'Based in Dresden', 'Available for remote work'];
-  myInfoDE = ['Frontend Entwickler', 'Wohne in Dresden', 'Remote Arbeiten'];
-  myInfo = this.myInfoDE;
-
-  navBarDE = ['Über mich', 'Skills', 'Projekte'];
-  navBarEN = ['About me', 'Skills', 'Projects'];
-  navBar = this.navBarDE;
-  
-  legalNoticeDE = 'Impressum';
-  legalNoticeEN = 'Legal Notice';
-  legalNotice = this.legalNoticeDE;
-
-  frontendDE = 'Frontend Entwickler';
-  frontendEN = 'Frontend Developer';
-  frontend = this.frontendDE;
-  constructor(){
-    this.checkLang();
+  toLang = 0;
+  myInfo = this.datas[this.toLang].myInfo;
+  navBar = this.datas[this.toLang].navBar;
+  legalNotice = this.datas[this.toLang].legalNotice;
+  frontend = this.datas[this.toLang].frontend;
+  constructor() { 
+    this.setLang();
   }
 
-  checkLang(){
-    setInterval(() => {
-      this.myInfo = this.languarge == 'DE' ? this.myInfoDE : this.myInfoEN;
-      this.navBar = this.languarge == 'DE' ? this.navBarDE : this.navBarEN;
-      this.legalNotice = this.languarge == 'DE' ? this.legalNoticeDE : this.legalNoticeEN;
-      this.frontend = this.languarge == 'DE' ? this.frontendDE : this.frontendEN;
-    })
+  setLang() {
+    setInterval(() =>{
+      this.toLang = this.languarge == 'DE' ? 0 : 1;
+      this.headerLang();
+      this.footerLang();
+    } ,100)
+  }
+
+  headerLang(){
+    this.myInfo = this.datas[this.toLang].myInfo;
+    this.navBar = this.datas[this.toLang].navBar;
+    this.frontend = this.datas[this.toLang].frontend;
+  }
+
+  footerLang(){
+    this.legalNotice = this.datas[this.toLang].legalNotice;
   }
 }
