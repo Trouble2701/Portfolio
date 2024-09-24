@@ -1,0 +1,77 @@
+section{
+    margin-top: 144px;
+
+    div{
+        width: 1248px;
+        height: 695px;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 90px;
+    
+        .skillText{
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            flex-direction: column;
+            gap: 20px;
+            width: 520px;
+    
+            >span{
+                font-family: 'Karla';
+                font-weight: 700;
+                font-size: 24px;
+                line-height: 28.06px;
+                color: #3DCFB6;
+            }
+
+            .skillBox{
+                display: flex;
+                justify-content: center;
+                gap: 40px;
+                width: calc(520px - 64px);
+                height: 503px;
+                border: 1px solid #3DCFB6;
+                background-color: #3DCFB61A;
+                border-radius: 30px;
+                padding: 32px;
+            }
+        }
+
+        .allSkills{
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: 72px;
+            max-width: 632px;
+            height: 428px;
+            position: relative;
+            top: 48px;
+
+            .oneOfSkill{
+                width: 104px;
+                height: 116px;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                flex-direction: column;
+                gap: 8px;
+
+                >img{
+                    width: 64px;
+                    height: 64px;
+                }
+
+                >span{
+                    font-family: 'Fira Code';
+                    font-weight: 400;
+                    font-size: 18px;
+                    line-height: 21.6px;
+                    color: #FFFFFF;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}

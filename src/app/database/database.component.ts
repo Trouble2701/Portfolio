@@ -13,15 +13,25 @@ export class DatabaseComponent {
 
   navBarDE = ['Über mich', 'Skills', 'Projekte'];
   navBarEN = ['About me', 'Skills', 'Projects'];
-  navBar = this.navBarDE; 
+  navBar = this.navBarDE;
+  
+  legalNoticeDE = 'Impressum';
+  legalNoticeEN = 'Legal Notice';
+  legalNotice = this.legalNoticeDE;
+
+  frontendDE = 'Frontend Entwickler';
+  frontendEN = 'Frontend Developer';
+  frontend = this.frontendDE;
   constructor(){
     this.checkLang();
   }
 
   checkLang(){
     setInterval(() => {
-      this.languarge == 'DE' ? this.myInfo = this.myInfoDE : this.myInfo = this.myInfoEN;
-      this.languarge == 'DE' ? this.navBar = this.navBarDE : this.navBar = this.navBarEN;
+      this.myInfo = this.languarge == 'DE' ? this.myInfoDE : this.myInfoEN;
+      this.navBar = this.languarge == 'DE' ? this.navBarDE : this.navBarEN;
+      this.legalNotice = this.languarge == 'DE' ? this.legalNoticeDE : this.legalNoticeEN;
+      this.frontend = this.languarge == 'DE' ? this.frontendDE : this.frontendEN;
     })
   }
 }

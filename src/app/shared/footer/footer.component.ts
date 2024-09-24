@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject, Input } from '@angular/core';
+import { DatabaseComponent } from '../../database/database.component';
 
 @Component({
   selector: 'app-footer',
@@ -8,5 +9,10 @@ import { Component } from '@angular/core';
   styleUrl: './footer.component.scss'
 })
 export class FooterComponent {
+  database = inject(DatabaseComponent);
+  @Input() notice:any;
 
+  constructor(){
+    setInterval(() => this.notice = this.database.legalNotice, 100);
+  }
 }

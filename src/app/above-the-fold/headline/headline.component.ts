@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject, Input } from '@angular/core';
+import { DatabaseComponent } from '../../database/database.component';
 
 @Component({
   selector: 'app-headline',
@@ -8,5 +9,11 @@ import { Component } from '@angular/core';
   styleUrl: './headline.component.scss'
 })
 export class HeadlineComponent {
+  database = inject(DatabaseComponent);
 
+  @Input() frontend: any;
+
+  constructor(){
+    setInterval(() => this.frontend = this.database.frontend, 100);
+  }
 }
