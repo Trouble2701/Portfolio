@@ -13,6 +13,7 @@ export class NavComponent {
 
   database = inject(DatabaseComponent);
   @ViewChild('background') background: ElementRef | any;
+  @ViewChild('dotNav') dotLink: ElementRef | any;
 
   constructor() {
     this.siteLang();
@@ -20,11 +21,7 @@ export class NavComponent {
 
   siteLang() {
     setInterval(() => {
-      if (this.database.languarge == 'DE') {
-        this.siteLangDE()
-      } else {
-        this.siteLangEN();
-      }
+      this.database.languarge == 'DE' ? this.siteLangDE() : this.siteLangEN();
     })
   }
 
@@ -36,5 +33,15 @@ export class NavComponent {
   siteLangDE() {
     this.database.languarge = 'DE';
     this.background.nativeElement.setAttribute('style', 'left: 42px');
+  }
+
+  dotNavChange(number:number):void{
+    let Number = (152*number);
+    let leftSide = 65+Number;
+    this.dotLink.nativeElement.setAttribute('style', 'display:flex; left:'+leftSide+'px');
+  }
+
+  dotNavOut(){
+    this.dotLink.nativeElement.setAttribute('style', 'display:none');
   }
 }

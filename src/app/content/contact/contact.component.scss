@@ -1,0 +1,246 @@
+div {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 1248px;
+    margin-top: 144px;
+    gap: 40px;
+
+    .contactInfo {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-direction: column;
+        color: #3DCFB6;
+        width: 568px;
+        gap: 20px;
+
+        >span {
+            font-size: 24px;
+            font-family: 'Karla';
+            font-weight: 500;
+            line-height: 28.06px;
+        }
+
+        >h1 {
+            font-size: 64px;
+            font-family: 'Fira Code';
+            font-weight: 700;
+            line-height: 64px;
+        }
+
+        .problem {
+            font-weight: 700 !important;
+            line-height: 28.8px !important;
+        }
+
+        .white {
+            color: #FFFFFF !important;
+            font-size: 16px !important;
+            line-height: 19.2px;
+
+            >p {
+                margin-block-start: 0;
+                margin-block-end: 0;
+                display: contents;
+                font-weight: 700;
+                color: #3DCFB6;
+            }
+        }
+    }
+
+    .contactForm {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-direction: column;
+        color: #3DCFB6;
+        width: 616px;
+        gap: unset;
+        position: relative;
+
+        .input {
+            width: 616px;
+            height: 67px;
+            border-top: 1px solid #3DCFB680;
+            border-bottom: 1px solid #3DCFB680;
+            padding: 32px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-direction: column;
+            gap: 16px;
+            margin-top: unset;
+            cursor: pointer;
+            transition: all 125ms ease-in-out;
+
+            >span {
+                font-size: 24px;
+                font-weight: 500;
+                font-family: 'Fira Code';
+                line-height: 28.8px;
+                color: #3DCFB6;
+            }
+
+            .contactInput {
+                width: 500px;
+                height: 22px;
+                background: none;
+                border: none;
+                color: #FFFFFF;
+                font-size: 18px;
+                font-family: 'Karla';
+                font-weight: 400;
+                line-height: 21.6px;
+
+                &::placeholder {
+                    color: #FFFFFFCC;
+                }
+            }
+
+            .contactInputRed {
+              width: 500px;
+              height: 22px;
+              background: none;
+              border: none;
+              color: #FFFFFF;
+              font-size: 18px;
+              font-family: 'Karla';
+              font-weight: 400;
+              line-height: 21.6px;
+
+              &::placeholder {
+                  color: #ff0000cc;
+              }
+          }
+
+            .container {
+                display: block;
+                position: relative;
+                padding-left: 17px;
+                margin-bottom: 17px;
+                cursor: pointer;
+                font-size: 22px;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+                transition: all 125ms ease-in-out;
+              }
+              
+              /* Hide the browser's default checkbox */
+              .container input {
+                position: absolute;
+                opacity: 0;
+                cursor: pointer;
+                height: 0;
+                width: 0;
+              }
+              
+              /* Create a custom checkbox */
+              .checkmark {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 18px;
+                width: 18px;
+                background-color: transparent;
+                border: 1px solid #3DCFB6;
+                border-radius: 5px;
+              }
+              
+              /* On mouse-over, add a grey background color */
+              .container:hover input ~ .checkmark {
+                background-color: #3DCFB680;
+              }
+              
+              /* When the checkbox is checked, add a blue background */
+              .container input:checked ~ .checkmark {
+                background-color: transparent;
+              }
+              
+              /* Create the checkmark/indicator (hidden when not checked) */
+              .checkmark:after {
+                content: "";
+                position: absolute;
+                display: none;
+              }
+              
+              /* Show the checkmark when checked */
+              .container input:checked ~ .checkmark:after {
+                display: block;
+              }
+              
+              /* Style the checkmark/indicator */
+              .container .checkmark:after {
+                left: 6px;
+                top: 2px;
+                width: 4px;
+                height: 8px;
+                border: solid #3DCFB6;
+                border-width: 0 3px 3px 0;
+                -webkit-transform: rotate(45deg);
+                -ms-transform: rotate(45deg);
+                transform: rotate(45deg);
+              }
+
+              .policy{
+                font-size: 15px;
+                font-family: 'Karla';
+                font-weight: 400;
+                line-height: 18px;
+                color: #FFFFFF;
+                position: relative;
+
+                >a{
+                    font-family: 'Fira Code';
+                    color: #3DCFB6;
+                    text-decoration: none;
+                }
+
+                .no{
+                    display: none;
+                    position: absolute;
+                    top: 10px;
+                    color: red;
+                  }
+              }
+
+              &:hover{
+                border-color: #3DCFB6;
+              }
+        }
+
+        .noneBorder {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+            border-top: unset;
+            border-bottom: unset;
+            padding-left: 0;
+        }
+
+        .send{
+            width: 100%;
+            margin-top: unset;
+
+            .button{
+                width: 139px;
+                height: 48px;
+                border-radius: 100px;
+                border: 1px solid #FFFFFF80;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+                margin-top: unset;
+                font-size: 18px;
+                font-family: 'Karla';
+                font-weight: 400;
+                line-height: 21.6px;
+                color: #FFFFFFCC;
+            }
+        }
+    }
+}

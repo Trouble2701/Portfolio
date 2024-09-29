@@ -27,6 +27,11 @@ div {
             font-size: 18px;
             line-height: 21.6px;
             text-decoration: none;
+            transition: all 125ms ease-in-out;
+
+            &:hover{
+                color: #3DCFB6;
+            }
         }
     }
 

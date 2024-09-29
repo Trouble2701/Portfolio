@@ -9,7 +9,10 @@
         </div>
         <div class="sitelinks">
             @for(navLinks of database.navBar; track navLinks; let i = $index){
-                <a href="#{{database.datas[1].navBar[i].toLowerCase().replace(' ', '')}}">{{navLinks}}</a>
+                <div class="navLinks">
+                    <a href="#{{database.datas[1].navBar[i].toLowerCase().replace(' ', '')}}" (mouseover)="dotNavChange(i)" (mouseout)="dotNavOut()">{{navLinks}}</a>
+                    <div class="dotNav" #dotNav></div>
+                </div>
             }
         </div>
     </div>

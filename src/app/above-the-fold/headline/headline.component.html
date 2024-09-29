@@ -3,8 +3,9 @@
     <div>
         <h1>Sven Plankenbichler</h1>
         <div>
-            <a href="#projects" class="headlineButton">Check my Work</a>
-            <a href="#contact" class="headlineButton">Contact me</a>
+            @for(headLinks of database.headLine; track headLinks; let i = $index){
+            <a class="headlineButton" href="#{{database.datas[1].headline[i].toLowerCase().replace(' ', '')}}">{{headLinks}}</a>
+            }
         </div>
     </div>
 </div>
