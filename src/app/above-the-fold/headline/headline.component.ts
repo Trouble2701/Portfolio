@@ -1,4 +1,4 @@
-import { Component, inject, Input, ViewChild } from '@angular/core';
+import { Component, inject, Input} from '@angular/core';
 import { DatabaseComponent } from '../../database/database.component';
 import { DomSanitizer } from '@angular/platform-browser';
 
@@ -13,9 +13,8 @@ export class HeadlineComponent {
   database = inject(DatabaseComponent);
 
   @Input() frontend: any;
-  @Input() marqueeOpen:any;
-  @Input() marqueeClose:any;
-  @Input() workLang:any;
+  @Input() project: any;
+  @Input() contact: any;
 
   contactLang:any;
 
@@ -25,5 +24,7 @@ export class HeadlineComponent {
 
   setLang(){
     this.frontend = this.database.frontend;
+    this.project = this.database.headLine[0];
+    this.contact = this.database.headLine[1];
   }
 }

@@ -1,6 +1,7 @@
 import { NgClass } from '@angular/common';
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Component, ElementRef, Input, ViewChild, inject } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { DatabaseComponent } from '../../database/database.component';
 
 @Component({
   selector: 'app-contact',
@@ -11,44 +12,119 @@ import { FormsModule } from '@angular/forms';
 })
 export class ContactComponent {
 
-  pname:string = 'Your name goes here';
-  pemail:string = 'youremail@email.com';
-  phelp:string = 'Hello Sven, i am intrested in..';
-  name:string = '';
-  email:string = '';
-  help:string = '';
-  checkBox:boolean = false;
-  dataCheck:boolean = true;
+  database = inject(DatabaseComponent);
+  pname: string = 'Your name goes here';
+  pemail: string = 'youremail@email.com';
+  phelp: string = 'Hello Sven, i am intrested in..';
+  name: string = '';
+  email: string = '';
+  help: string = '';
+  @Input() contactMe: any;
+  @Input() working: any;
+  @Input() problem: any;
+  @Input() contactThrougth: any;
+  @Input() developer: any;
+  @Input() talk: any;
+  @Input() whatsName: any;
+  @Input() namePlace: any;
+  @Input() whatsEmail: any;
+  @Input() emailPlace: any;
+  @Input() whatsHelp: any;
+  @Input() helpPlace: any;
+  @Input() ppFirst: any;
+  @Input() ppSecond: any;
+  @Input() ppThird: any;
+  @Input() hello: any;
+  nameFailed: any;
+  emailFailed: any;
+  helpFailed: any;
+  acceptFailed: any;
+  checkBox: boolean = false;
+  dataCheck: boolean = true;
   @ViewChild('accept') accept: ElementRef | any;
   @ViewChild('nameType') nameType: ElementRef | any;
   @ViewChild('emailType') emailType: ElementRef | any;
   @ViewChild('helpType') helpType: ElementRef | any;
 
-  sendMail(name:string, email:string, help:string, checkBox:any){
-    if(!name){
-      this.nameType.nativeElement.setAttribute('placeholder', 'Oops! it seems your name is missing');
+  constructor() {
+    setInterval(() => {
+      this.setLang();
+      this.setLangFaild();
+      this.setLangPP();
+    }, 100);
+  }
+  sendMail(name: string, email: string, help: string, checkBox: any) {
+    if (!name) {
+      this.nameType.nativeElement.setAttribute('placeholder', this.nameFailed);
       this.setClass(name);
-    }
-    if(!email) {
-      this.emailType.nativeElement.setAttribute('placeholder', 'Hoppla! your email is required');
+    } else if (!email) {
+      this.emailType.nativeElement.setAttribute('placeholder', this.emailFailed);
       this.setClass(email);
-    }
-    if(!help){
-      this.helpType.nativeElement.setAttribute('placeholder', 'What do you need to develop?');
+    } else if (!help) {
+      this.helpType.nativeElement.setAttribute('placeholder', this.helpFailed);
       this.setClass(help);
-    }
-    if(!checkBox){
-      this.accept.nativeElement.setAttribute('style', 'display: flex');
-    }else{
-      this.accept.nativeElement.setAttribute('style', 'display: none');
+    } else {
+      if(this.ValidateEmail(email)){
+        if (!checkBox) {
+          this.accept.nativeElement.setAttribute('style', 'display: flex');
+        } else {
+          this.accept.nativeElement.setAttribute('style', 'display: none');
+          console.log('send Mail');
+        }
+      }
     }
   }
 
-  setClass(data:string){
-    if(!data){
+  setClass(data: string) {
+    if (!data) {
       this.dataCheck = false;
-    }else{
+    } else {
       this.dataCheck = true;
     }
+  }
+
+  setLang() {
+    this.contactMe = this.database.contact[0];
+    this.working = this.database.contact[1];
+    this.problem = this.database.contact[2];
+    this.contactThrougth = this.database.contact[3];
+    this.developer = this.database.contact[4];
+    this.talk = this.database.contact[5];
+    this.whatsName = this.database.contact[6];
+    this.pname = this.database.contact[7];
+    this.whatsEmail = this.database.contact[8];
+    this.pemail = this.database.contact[9];
+    this.whatsHelp = this.database.contact[10];
+    this.phelp = this.database.contact[11];
+  }
+
+  setLangFaild() {
+    this.nameFailed = this.database.contact[12];
+    this.emailFailed = this.database.contact[13];
+    this.helpFailed = this.database.contact[14];
+    this.acceptFailed = this.database.contact[15];
+  }
+
+  setLangPP(){
+    this.ppFirst = this.database.contact[16];
+    this.ppSecond = this.database.contact[17];
+    this.ppThird = this.database.contact[18];
+    this.hello = this.database.contact[19];
+  }
+
+  ValidateEmail(input:string) {
+
+    var validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+  
+    if (input.match(validRegex)) {
+      this.emailType.nativeElement.setAttribute('style', 'color: #FFFFFFF');
+      return true;
+  
+    } else {
+      this.emailType.nativeElement.setAttribute('style', 'color: red');
+      return false;
+  
+    }
+  
   }
 }

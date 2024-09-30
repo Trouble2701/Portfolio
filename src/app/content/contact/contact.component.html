@@ -1,22 +1,22 @@
-<div>
+<div id="contactme">
     <div class="contactInfo">
-        <span>Contact me</span>
-        <h1>Let's work together</h1>
-        <span class="problem">Got a problem to solve?</span>
-        <span class="white">Contact me througth this form, I am interested in hearing from you, knowing your ideas and contributing to your projects with my work.</span>
-        <span class="white">Need a Frontend developer? <p>Let's Talk!</p></span>
+        <span>{{contactMe}}</span>
+        <h1>{{working}}</h1>
+        <span class="problem">{{problem}}</span>
+        <span class="white">{{contactThrougth}}</span>
+        <span class="white">{{developer}} <p>{{talk}}</p></span>
     </div>
     <div class="contactForm">
         <div class="input">
-            <span>What's your name?</span>
+            <span>{{whatsName}}</span>
             <input type="text" [ngClass]="dataCheck == true ? 'contactInput' : 'contactInputRed'" [(ngModel)]="name" [placeholder]="pname" #nameType>
         </div>
         <div class="input">
-            <span>What's your email?</span>
-            <input type="text" [ngClass]="dataCheck == true ? 'contactInput' : 'contactInputRed'" [(ngModel)]="email" [placeholder]="pemail" #emailType>
+            <span>{{whatsEmail}}</span>
+            <input type="text" [ngClass]="dataCheck == true ? 'contactInput' : 'contactInputRed'" (input)="ValidateEmail(email)" [(ngModel)]="email" [placeholder]="pemail" #emailType>
         </div>
         <div class="input">
-            <span>How can I help you?</span>
+            <span>{{whatsHelp}}</span>
             <input type="text" [ngClass]="dataCheck == true ? 'contactInput' : 'contactInputRed'" [(ngModel)]="help" [placeholder]="phelp" #helpType>
         </div>
         <div class="input noneBorder">
@@ -24,12 +24,12 @@
                 <input type="checkbox"  [(ngModel)]="checkBox">
                 <span class="checkmark"></span>
             </label>
-            <span class="policy">I've read the <a>privacy policy</a> and agree to the processing of my data as outlined.
-                <p class="no" #accept>Bitte Akzeptieren</p>
+            <span class="policy">{{ppFirst}} <a href="#policy">{{ppSecond}}</a> {{ppThird}}
+                <p class="no" #accept>{{acceptFailed}}</p>
             </span>
         </div>
         <div class="send">
-            <div class="button" (click)="sendMail(name, email, help, checkBox)">Say Hello ;)</div>
+            <div class="button" (click)="sendMail(name, email, help, checkBox)">{{hello}} ;)</div>
         </div>
     </div>
 </div>
