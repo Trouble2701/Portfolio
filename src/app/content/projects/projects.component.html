@@ -1,1 +1,57 @@
-<p>projects works!</p>
+<div id="projects">
+    <div class="leftSection">
+        <span class="portfolio">Portfolio</span>
+        <h1>Featured Projects</h1>
+        <span class="description">Explore a selection of my work here - interact with<br>projects to see my skills in action</span>
+        <div class="sites">
+            <section (click)="openInfo('first')" (mouseenter)="changeStyleImg('first')" (mouseleave)="changeStyleImgBack()">
+                <span class="title">Join <img class="first" src="assets/img/icons/arrow_outward.png" #first></span>
+                <span class="code">Angular <p>|</p> TypeScript <p>|</p> HTML <p>|</p> CSS <p>|</p> Firebase</span>
+            </section>
+            <section (click)="openInfo('second')" (mouseenter)="changeStyleImg('second')" (mouseleave)="changeStyleImgBack()">
+                <span class="title">El Pollo Loco <img class="second" src="assets/img/icons/arrow_outward.png" #second></span>
+                <span class="code">HTML <p>|</p> CSS <p>|</p> JavaScript</span>
+            </section>
+            <section (click)="openInfo('third')" (mouseenter)="changeStyleImg('third')" (mouseleave)="changeStyleImgBack()">
+                <span class="title">DA Bubble <img class="third" src="assets/img/icons/arrow_outward.png" #third></span>
+                <span class="code">Angular <p>|</p> TypeScript <p>|</p> Firebase</span>
+            </section>
+        </div>
+    </div>
+    <div class="rightSection">
+        <img class="firstImg" src="assets/img/sites/join.png" #firstImg>
+        <img class="firstImgBG" src="assets/img/sites/sitesCapa.png" #firstImgBG>
+        <img class="secondImg" src="assets/img/sites/elpollo.png" #secondImg>
+        <img class="secondImgBG" src="assets/img/sites/sitesCapa.png" #secondImgBG>
+        <img class="thirdImg" src="assets/img/sites/dabubble.png" #thirdImg>
+        <img class="thirdImgBG" src="assets/img/sites/sitesCapa.png" #thirdImgBG>
+    </div>
+</div>
+<div class="showSiteInfoBackground" #info (click)="closeInfo()">
+    <div class="showSiteInfo" (click)="onEvent($event)">
+        <div class="siteLeft">
+            <span class="number">{{siteNr}}</span>
+            <span class="titleInfo">{{siteName}}</span>
+            <span class="questionInfo">What is this project about?</span>
+            <span class="descriptionInfo">{{description}}</span>
+            <div class="codeInfo">
+                @for(codearts of codes; track codearts; let i = $index){
+                    @if(this.database.codearts[codearts]){
+                        <div class="codeShow">
+                            <img src="assets/img/icons/{{this.database.codearts[codearts].toLowerCase().replace(' ', '')}}green.png">
+                            <span class="codeName">{{this.database.codearts[codearts]}}</span>
+                        </div>
+                    }
+                }
+            </div>
+            <div class="siteLinks">
+                <a href="{{siteLinksGit}}" target="_blank">Github<img src="assets/img/icons/arrow_outwardgreen.png"></a><a href="{{siteLinksTest}}" target="_blank">Live Test<img src="assets/img/icons/arrow_outwardgreen.png"></a>
+            </div>
+        </div>
+        <div class="siteRight">
+            <div class="closedIcon" (click)="closeInfo()"><img class="closeSmall" src="assets/img/icons/close_small.png"><img class="close" src="assets/img/icons/close.png"></div>
+            <img src="assets/img/sites/{{img}}">
+            <div class="nextProject" (click)="openInfo(nextPage)"><span>Next Project</span><img src="assets/img/icons/arrows.png"></div>
+        </div>
+    </div>
+</div>

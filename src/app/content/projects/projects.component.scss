@@ -1,0 +1,405 @@
+div {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 1248px;
+    height: 581px;
+    margin-top: 20px;
+    position: relative;
+
+    .leftSection {
+        width: 880px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-start;
+        flex-direction: column;
+        margin-top: unset;
+
+        .portfolio {
+            font-family: 'Karla';
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 28.06px;
+            color: #3DCFB6;
+        }
+
+        >h1 {
+            font-family: 'Fira Code';
+            font-weight: 700;
+            font-size: 64px;
+            line-height: 64px;
+            color: #3DCFB6;
+            margin-top: 20px;
+        }
+
+        .description {
+            font-family: 'Karla';
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 21.06px;
+            color: #FFFFFF;
+            margin-top: 30px;
+        }
+
+        .sites {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            width: 880px;
+            height: 327px;
+            border-top: 1px solid #3DCFB6;
+            gap: unset;
+            margin-top: 45px;
+
+            >section {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: calc(100% - 64px);
+                height: 109px;
+                border-bottom: 1px solid #3DCFB6;
+                padding: 0 32px 0 32px;
+                transition: all 125ms ease-in-out;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: #3DCFB61A;
+                }
+
+                .title {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 4px;
+                    font-family: 'Fira Code';
+                    font-weight: 700;
+                    font-size: 24px;
+                    line-height: 28.8px;
+                    color: #FFFFFF;
+
+                    >img {
+                        display: none;
+                    }
+                }
+
+                .code {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: row;
+                    gap: 4px;
+                    font-family: 'Karla';
+                    font-weight: 400;
+                    font-size: 18px;
+                    line-height: 21.6px;
+                    color: #FFFFFF;
+
+                    p {
+
+                        color: #3DCFB6;
+                    }
+                }
+            }
+        }
+    }
+
+    .rightSection {
+        width: 880px;
+        height: 100%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        flex-direction: column;
+        margin-top: unset;
+        position: relative;
+
+        .firstImg {
+            display: none;
+            height: 192px;
+            width: 295px;
+            border-radius: 30px;
+            position: absolute;
+            bottom: 135px;
+            z-index: 1;
+        }
+
+        .firstImgBG {
+            display: none;
+            height: 192px;
+            width: 295px;
+            border-radius: 30px;
+            position: absolute;
+            bottom: 120px;
+            right: -15px;
+            z-index: 0;
+        }
+
+        .secondImg {
+            display: none;
+            height: 192px;
+            width: 295px;
+            border-radius: 30px;
+            position: absolute;
+            bottom: 67.5px;
+            z-index: 1;
+        }
+
+        .secondImgBG {
+            display: none;
+            height: 192px;
+            width: 295px;
+            border-radius: 30px;
+            position: absolute;
+            bottom: 52.5px;
+            right: -15px;
+            z-index: 0;
+        }
+
+        .thirdImg {
+            display: none;
+            height: 192px;
+            width: 295px;
+            border-radius: 30px;
+            position: absolute;
+            bottom: 0;
+            z-index: 1;
+        }
+
+        .thirdImgBG {
+            display: none;
+            height: 192px;
+            width: 295px;
+            border-radius: 30px;
+            position: absolute;
+            bottom: -15px;
+            right: -15px;
+            z-index: 0;
+        }
+    }
+}
+
+.showSiteInfoBackground {
+    height: 100vh;
+    width: 100vw;
+    background-color: #1c1c1c7c;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    margin: 0;
+
+    .showSiteInfo {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 1095px;
+        height: 581px;
+        background-image: linear-gradient(55deg, #1C1C1C 40%, #08463B);
+        border-radius: 30px;
+        border: 1px solid #3DCFB6;
+        transition: all 125ms ease-in-out;
+        padding: 80px;
+        position: absolute;
+        gap: 40px;
+
+        .siteLeft {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            flex-direction: column;
+            width: 480px;
+            height: 474px;
+
+            .number {
+                font-family: 'Karla';
+                font-size: 128px;
+                font-weight: 700;
+                line-height: 100px;
+                color: #3DCFB6;
+            }
+
+            .titleInfo {
+                font-family: 'Fira Code';
+                font-size: 64px;
+                font-weight: 700;
+                line-height: 51.2px;
+                color: #FFFFFF;
+                margin-top: 24px;
+            }
+
+            .questionInfo {
+                font-family: 'Fira Code';
+                font-size: 24px;
+                font-weight: 700;
+                line-height: 28.8px;
+                color: #3DCFB6;
+                margin-top: 32px;
+            }
+
+            .descriptionInfo {
+                font-family: 'Karla';
+                font-size: 18px;
+                font-weight: 400;
+                line-height: 21.6px;
+                color: #FFFFFF;
+                margin-top: 20px;
+            }
+
+            .codeInfo {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                gap: 20px;
+                width: 480px;
+                height: 24px;
+
+                .codeShow {
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    height: 40px;
+                    width: unset;
+                    gap: 10px;
+
+                    >img {
+                        width: 24px;
+                        height: 24px;
+                    }
+
+                    .codeName {
+                        font-family: 'Karla';
+                        font-size: 16px;
+                        font-weight: 400;
+                        line-height: 19.2px;
+                        color: #FFFFFF;
+                    }
+                }
+            }
+
+            .siteLinks {
+                width: 100%;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                gap: 32px;
+                margin-top: 50px;
+
+                >a {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 10px;
+                    text-decoration: none;
+                    width: 130px;
+                    height: 48px;
+                    border: 1px solid #FFFFFF;
+                    border-radius: 100px;
+                    padding-left: 24px;
+                    padding-right: 24px;
+                    color: #FFFFFF;
+                    font-family: 'Karla';
+                    font-weight: 400;
+                    font-size: 18px;
+                    line-height: 21.6px;
+                    transition: all 125ms ease-in-out;
+
+                    >img {
+                        width: 20px;
+                        height: 20px;
+                    }
+
+                    &:hover {
+                        color: #3DCFB6;
+                        border-color: #3DCFB6;
+
+                        >img {
+                            transform: translateX(5px) translateY(-5px);
+                        }
+                    }
+                }
+            }
+        }
+
+        .siteRight {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            flex-direction: column;
+            width: 520px;
+            height: 600px;
+            gap: 60px;
+
+            .closedIcon {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 18px;
+                height: 18px;
+                transition: all 125ms ease-in-out;
+                cursor: pointer;
+
+                &:hover{
+                    .closeSmall {
+                        display: none;
+                    }
+    
+                    .close {
+                        display: flex;
+                    }    
+                }
+
+                .closeSmall {
+                    display: flex;
+                }
+
+                .close {
+                    display: none;
+                }
+            }
+
+            .nextProject{
+                width: 151px;
+                height: 40px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 10px;
+                transition: all 125ms ease-in-out;
+                cursor: pointer;
+
+                >span{
+                    font-family: 'Karla';
+                    font-weight: 400;
+                    font-size: 18px;
+                    line-height: 21.6px;
+                    color: #3DCFB6;
+                }
+
+                >img{
+                    width: 40px;
+                    height: 40px;
+                }
+
+                &:hover{
+
+                    >span{
+                        color: #FFFFFF;
+                    }
+
+                    >img{
+                        transform: translateX(15px);
+                    }
+                }
+            }
+
+            >img {
+                width: 520px;
+                border-radius: 30px;
+            }
+        }
+    }
+}

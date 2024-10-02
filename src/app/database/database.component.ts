@@ -69,6 +69,21 @@ export class DatabaseComponent {
       }
     ];
 
+
+    sites = [
+      {
+        name: ['Join', 'El Pollo Loco', 'DA Bubble'],
+        img: ['join.png', 'elpollo.png', 'dabubble.png'],
+        description: 
+        ['Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
+          'This is a Game',
+          'This is a Chat Webapp'],
+        siteLinksGit:['https://github.com/ClaudiaDaneder/Join', 'https://github.com/Trouble2701/el-polo-loco', 'https://github.com'],
+        siteLinksTest:['https://sven-friedrich.developerakademie.net/Join/', 'https://sven-friedrich.developerakademie.net/elpollo/', 'https://dabubble.ihor-tsarkov.com/'],
+      }
+    ];
+
+    codearts = ['CSS', 'HTML', 'Firebase', 'Angular', 'TypeScript', 'JavaScript'];
   languarge = 'DE';
   toLang = 0;
   myInfo = this.datas[this.toLang].myInfo;
