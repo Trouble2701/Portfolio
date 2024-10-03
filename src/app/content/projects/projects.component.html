@@ -1,8 +1,8 @@
 <div id="projects">
     <div class="leftSection">
         <span class="portfolio">Portfolio</span>
-        <h1>Featured Projects</h1>
-        <span class="description">Explore a selection of my work here - interact with<br>projects to see my skills in action</span>
+        <h1>{{database.projects}}</h1>
+        <span class="description">{{database.projectsDes}}</span>
         <div class="sites">
             <section (click)="openInfo('first')" (mouseenter)="changeStyleImg('first')" (mouseleave)="changeStyleImgBack()">
                 <span class="title">Join <img class="first" src="assets/img/icons/arrow_outward.png" #first></span>
@@ -32,7 +32,7 @@
         <div class="siteLeft">
             <span class="number">{{siteNr}}</span>
             <span class="titleInfo">{{siteName}}</span>
-            <span class="questionInfo">What is this project about?</span>
+            <span class="questionInfo">{{database.projectsQuest}}</span>
             <span class="descriptionInfo">{{description}}</span>
             <div class="codeInfo">
                 @for(codearts of codes; track codearts; let i = $index){

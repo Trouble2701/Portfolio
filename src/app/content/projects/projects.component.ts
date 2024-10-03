@@ -24,7 +24,7 @@ export class ProjectsComponent {
   @ViewChild('info') info: ElementRef | any;
   @Input() siteNr:string = '';
   @Input() siteName:string = '';
-  @Input() description:string = '';
+  @Input() description:any = '';
   @Input() numberOfJSON:number = 0;
   @Input() siteLinksGit:string = '';
   @Input() siteLinksTest:string = '';
