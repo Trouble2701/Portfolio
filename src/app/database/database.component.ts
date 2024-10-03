@@ -141,7 +141,6 @@ export class DatabaseComponent {
     this.projectsInfoFirst = this.datas[this.toLang].projectsInfoFirst;
     this.projectsInfoSecond = this.datas[this.toLang].projectsInfoSecond;
     this.projectsInfoThird = this.datas[this.toLang].projectsInfoThird;
-    console.log(this.projectsInfoFirst);
   }
 
   footerLang() {

@@ -110,5 +110,10 @@ nav {
     .logo {
         display: flex;
         justify-content: flex-end;
+        transition: all 125ms ease-in-out;
+
+        &:hover{
+            filter: drop-shadow(6px 4px 2px rgba(0, 0, 0, 0.9)) /* Mehrere drop-shadow-Effekte */
+        }
     }
 }

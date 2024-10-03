@@ -1,10 +1,11 @@
 import { Component, ElementRef, Input, ViewChild, inject } from '@angular/core';
 import { DatabaseComponent } from '../../database/database.component';
+import { NgOptimizedImage } from '@angular/common'
 
 @Component({
   selector: 'app-projects',
   standalone: true,
-  imports: [],
+  imports: [NgOptimizedImage],
   templateUrl: './projects.component.html',
   styleUrl: './projects.component.scss'
 })

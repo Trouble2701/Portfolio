@@ -44,4 +44,8 @@ export class NavComponent {
   dotNavOut(){
     this.dotLink.nativeElement.setAttribute('style', 'display:none');
   }
+
+  reload(){
+    location.reload();
+  }
 }

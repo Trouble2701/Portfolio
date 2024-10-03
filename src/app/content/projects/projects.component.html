@@ -19,11 +19,11 @@
         </div>
     </div>
     <div class="rightSection">
-        <img class="firstImg" src="assets/img/sites/join.png" #firstImg>
+        <img class="firstImg" ngSrc="assets/img/sites/join.png" width="295" height="192" #firstImg>
         <img class="firstImgBG" src="assets/img/sites/sitesCapa.png" #firstImgBG>
-        <img class="secondImg" src="assets/img/sites/elpollo.png" #secondImg>
+        <img class="secondImg" ngSrc="assets/img/sites/elpollo.png" width="295" height="192" #secondImg>
         <img class="secondImgBG" src="assets/img/sites/sitesCapa.png" #secondImgBG>
-        <img class="thirdImg" src="assets/img/sites/dabubble.png" #thirdImg>
+        <img class="thirdImg" ngSrc="assets/img/sites/dabubble.png" width="295" height="192" #thirdImg>
         <img class="thirdImgBG" src="assets/img/sites/sitesCapa.png" #thirdImgBG>
     </div>
 </div>
@@ -50,7 +50,7 @@
         </div>
         <div class="siteRight">
             <div class="closedIcon" (click)="closeInfo()"><img class="closeSmall" src="assets/img/icons/close_small.png"><img class="close" src="assets/img/icons/close.png"></div>
-            <img src="assets/img/sites/{{img}}">
+            <img ngSrc="assets/img/sites/{{img}}" width="520" height="320">
             <div class="nextProject" (click)="openInfo(nextPage)"><span>Next Project</span><img src="assets/img/icons/arrows.png"></div>
         </div>
     </div>
