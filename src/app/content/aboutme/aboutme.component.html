@@ -2,8 +2,25 @@
     <div>
         <img src="" alt="">
         <div class="personInfo">
-            <span>Who i Am</span>
-            <div class="aboutMe">About Me</div>
+            <span>{{database.whoIam[0]}}</span>
+            <div class="aboutMe">
+                <div class="head">{{database.whoIam[1]}}</div>
+                <div class="personalInfo">{{database.whoIam[2]}}</div>
+                <div class="details">
+                    <div class="oneDetail">
+                        <img src="assets/img/icons/flexible.png">
+                        <span>{{database.whoIam[3]}}</span>
+                    </div>
+                    <div class="oneDetail">
+                        <img src="assets/img/icons/fast.png">
+                        <span>{{database.whoIam[4]}}</span>
+                    </div>
+                    <div class="oneDetail">
+                        <img src="assets/img/icons/creativ.png">
+                        <span>{{database.whoIam[5]}}</span>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </section>

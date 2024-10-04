@@ -1,1 +1,31 @@
-<p>reviews works!</p>
+<div>
+    <h1>{{database.reviews[0]}}</h1>
+    <div class="allReviews">
+        <div class="leftReview" #review1>
+            <span class="reviewText">{{database.reviews[1]}}</span>
+            <div class="user">
+                <div class="line"></div><span class="name">Gabor H.</span>
+            </div>
+        </div>
+        <div class="showReview" #review2>
+            <span class="reviewText">{{database.reviews[2]}}</span>
+            <div class="user">
+                <div class="line"></div><span class="name">Claudia D.</span>
+            </div>
+        </div>
+        <div class="rightReview" #review3>
+            <span class="reviewText">{{database.reviews[3]}}</span>
+            <div class="user">
+                <div class="line"></div><span class="name">Sven P.</span>
+            </div>
+        </div>
+    </div>
+    <div class="allReviewsFront"></div>
+    <div class="arrow">
+        <img (click)="leftSlide()" (mouseenter)="arrowChange('left')"  (mouseleave)="arrowChangeBack('left')" src="assets/img/icons/arrowLeft.png" #leftArrow>
+        <div class="dot" #dot1></div>
+        <div class="dot" #dot2></div>
+        <div class="dot" #dot3></div>
+        <img (click)="rightSlide()" (mouseenter)="arrowChange('right')"  (mouseleave)="arrowChangeBack('right')" src="assets/img/icons/arrowLeft.png" src="assets/img/icons/arrowRight.png" #rightArrow>
+    </div>
+</div>

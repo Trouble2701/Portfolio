@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { DatabaseComponent } from '../../database/database.component';
 
 @Component({
   selector: 'app-aboutme',
@@ -9,4 +10,5 @@ import { Component } from '@angular/core';
 })
 export class AboutmeComponent {
 
+  database = inject(DatabaseComponent);
 }

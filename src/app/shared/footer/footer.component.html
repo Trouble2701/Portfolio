@@ -1,7 +1,7 @@
 <footer>
     <div>
         <div class="footerName">
-            <div (click)="top()" class="footerLeftImg">
+            <div (click)="top()" class="footerLeftImg" title="go to Start">
                 <img src="assets/img/logo/initials.png"><img src="assets/img/logo/name.png">
             </div>
             <div class="footerLeft">
@@ -17,15 +17,15 @@
             </div>
             <div class="footerSiteLinks">
                 <div class="dot" #link></div>
-                <a (mouseenter)="showDot('link')" (mouseleave)="showDontDot()">LinkedIn</a>
+                <a href="https://www.linkedin.com/in/sven-plankenbichler-1765442a7/" title="My LinkedIn" target="_blank" (mouseenter)="showDot('link')" (mouseleave)="showDontDot()">LinkedIn</a>
             </div>
             <div class="footerSiteLinks">
                 <div class="dot" #email></div>
-                <a (mouseenter)="showDot('email')" (mouseleave)="showDontDot()" href="#contact">Email</a>
+                <a (mouseenter)="showDot('email')" (mouseleave)="showDontDot()" title="Send Email" href="#contact">Email</a>
             </div>
             <div class="footerSiteLinks">
                 <div class="dot" #imprint></div>
-                <a (mouseenter)="showDot('imprint')" (mouseleave)="showDontDot()">{{notice}}</a>
+                <a href="/imprint" (mouseenter)="showDot('imprint')" (mouseleave)="showDontDot()" title="Show Impressum">{{notice}}</a>
             </div>
         </div>
     </div>

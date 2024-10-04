@@ -15,7 +15,7 @@ section{
     
         .personInfo {
             width: 568px;
-            height: 610px;
+            height: 650px;
             color: #3DCFB6;
             display: flex;
             justify-content: center;
@@ -36,14 +36,67 @@ section{
     
             .aboutMe {
                 display: flex;
-                justify-content: center;
+                justify-content: flex-start;
+                align-items: flex-start;
+                flex-direction: column;
                 width: 504px;
-                height: 562px;
+                height: 535px;
                 border: 1px solid #3DCFB6;
                 border-radius: 30px;
                 padding: 32px;
                 gap: 40px;
                 background: #3DCFB61A;
+
+                .head{
+                    width: 472px;
+                    height: 64px;
+                    font-family: 'Fira Code';
+                    font-weight: 700;
+                    font-size: 64px;
+                    line-height: 64px;
+                }
+
+                .personalInfo{
+                    width: 504px;
+                    height: 88px;
+                    font-family: 'Karla';
+                    font-weight: 400;
+                    font-size: 18px;
+                    line-height: 21.6px;
+                    text-align: justify;
+                    color: #FFFFFF;
+                }
+
+                .details{
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: flex-start;
+                    flex-direction: column;
+                    width: 504px;
+                    height: 274px;
+                    gap: 16px;
+
+                    .oneDetail{
+                        width: 504px;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: flex-start;
+                        flex-direction: row;
+                        gap: 24px;
+
+                        >span{
+                            font-family: 'Karla';
+                            font-weight: 400;
+                            font-size: 18px;
+                            color: #FFFFFF;
+                        }
+
+                        >img{
+                            width: 32px;
+                            height: 32px;
+                        }
+                    }
+                }
             }
         }
     }

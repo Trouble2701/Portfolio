@@ -16,9 +16,9 @@ export class DatabaseComponent {
         frontend: 'Frontend Entwickler',
         headline: ['Meine Arbeit', 'Schreib mir'],
         contact: [
-          'Kontaktieren Sie mich', 
-          'Lassen Sie uns zusammenarbeiten', 
-          'Müssen Sie ein Problem Lösen?', 
+          'Kontaktieren Sie mich',
+          'Lassen Sie uns zusammenarbeiten',
+          'Müssen Sie ein Problem Lösen?',
           'Kontaktieren Sie mich über dieses Formular. Ich bin daran interessiert, von Ihnen zu hören, Ihre Ideen kennenzulernen und mit meiner Arbeit zu Ihren Projekten beizutragen.',
           'Brauchen Sie einen Frontend-Entwickler?',
           'Lassen Sie uns Reden!',
@@ -43,6 +43,29 @@ export class DatabaseComponent {
         projectsInfoFirst: 'Vom Kanban-System inspirierter Aufgabenmanager. Erstellen und organisieren Sie Aufgaben mithilfe von Drag-and-Drop-Funktionen, weisen Sie Benutzer und Kategorien zu.',
         projectsInfoSecond: 'Spring-, Lauf- und Wurfspiel basierend auf einem objektorientierten Ansatz. Hilf Pepe, Münzen und Tabasco-Salsa zu finden, um gegen die verrückte Henne zu kämpfen.',
         projectsInfoThird: 'Diese App ist eine Slack-Clone-App. Es revolutioniert die Teamkommunikation und Zusammenarbeit mit seiner intuitiven Benutzeroberfläche, Echtzeit-Messaging und einer robusten Kanalorganisation.',
+        whoIam: [
+          'Wer bin ich',
+          'Über mich',
+          'Hallo, ich bin ein deutschsprachiger Frontend-Entwickler mit Sitz in Dresden. Motiviert durch die grenzenlosen Möglichkeiten innerhalb der IT, freue ich mich darauf, visuell fesselnde und intuitive Websites und Anwendungen zu erstellen.',
+          'Flexibel in Bezug auf die Arbeitsumgebung kann ich sowohl vor Ort in Dresden als auch remote effektiv arbeiten.',
+          'Ich bin aufgeschlossen und immer auf der Suche nach persönlichen Herausforderungen, um mein Wissen und meine Fähigkeiten stetig zu verbessern.',
+          "In meinem Beruf geht es beim Programmieren nicht nur darum, Code zu schreiben; Es ist eine kreative Form der Problemlösung. Ich bin stolz auf meine Fähigkeit, komplexe technische Herausforderungen in einfache, benutzerfreundliche Lösungen umzuwandeln. So helfe ich Ihnen, Ihre Ziele zu erreichen und Ihre Visionen zum Leben zu erwecken.",
+        ],
+        technologies: [
+          'Technologien',
+          'Fähigkeiten',
+          'Meine Reise umfasste die Arbeit an verschiedenen Projekten und den Einsatz verschiedener Frontend-Technologien und -Konzepte. Ich bin offen für den Einsatz neuer Technologien und Methoden, um meine Fähigkeiten kontinuierlich zu verbessern und in der sich ständig weiterentwickelnden Landschaft der Webentwicklung an der Spitze zu bleiben.',
+          'Sie brauchen eine',
+          'andere Fähigkeit?',
+          'Kontaktieren Sie mich gerne. Ich freue mich darauf, mein bisheriges Wissen zu erweitern.',
+          'Schreiben sie mir',
+        ],
+        reviews:[
+          'Was meine Kollegen über mich sagen',
+          'test',
+          'In unserer Projektarbeit war Sven ein unverzichtbarer und engagierter Kollege, der auch in schwierigen Situationen einen klaren Kopf behielt. Er war immer bereit, zu unterstützen, und brachte sich mit zielführenden Lösungsansätzen ein. Die Zusammenarbeit mit ihm war angenehm und durchweg konstruktiv.',
+          'Test',
+        ]
       },
       {
         myInfo: ['Frontend Developer', 'Based in Dresden', 'Available for remote work'],
@@ -51,9 +74,9 @@ export class DatabaseComponent {
         frontend: 'Frontend Developer',
         headline: ['Check my Work', 'Contact me'],
         contact: [
-          'Contact me', 
-          "Let's work together", 
-          'Got a problem to solve?', 
+          'Contact me',
+          "Let's work together",
+          'Got a problem to solve?',
           'Contact me througth this form, I am interested in hearing from you, knowing your ideas and contributing to your projects with my work.',
           'Need a Frontend developer?',
           "Let's Talk!",
@@ -78,6 +101,29 @@ export class DatabaseComponent {
         projectsInfoFirst: 'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
         projectsInfoSecond: 'Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.',
         projectsInfoThird: 'This App is a Slack Clone App. It revolutionizes team communication and collaboration with its intuitive interface, real-time messaging, and robust channel organization.',
+        whoIam: [
+          'Who I Am',
+          'About Me',
+          'Hi, I’m a german speaking Frontend Developer based in Dresden. Motivated by the limitless opportunities within IT, I am excited about crafting visually captivating and intuitive websites and applications.',
+          'Flexible in terms of working environments, I can work effectively both on-site in Dresden and remotely.',
+          'I am open-minded and always looking for personal challenges to constantly improve my knowledge and skills.',
+          "In my profession, programming isn't just about writing code; it's a creative form of problem-solving. I take pride in my ability to distill complex technical challenges into simple, user-friendly solutions. This way, I help you achieve your goals and bring your visions to life."
+        ],
+        technologies: [
+          'Technologies',
+          'Skill Set',
+          'My journey has involved working on diverse projects, employing a range of frontend technologies and concepts. I am open to embracing new technologies and methodologies to Continously enhance my skills and stay ahead in the ever-evolving landscape of web development.',
+          'You need',
+          'another skill?',
+          'Feel free to contact me. I look forward to expanding on my previous knowledge.',
+          "Let's Talk",
+        ],
+        reviews:[
+          'What my colleagues say about me',
+          'Test',
+          'In our project work, Sven was an indispensable and committed colleague who kept a clear head even in difficult situations. He was always ready to support and contributed targeted solutions. Working with him was pleasant and consistently constructive.',
+          'Test',
+        ]
       }
     ];
 
@@ -96,17 +142,20 @@ export class DatabaseComponent {
   projectsInfoFirst = this.datas[this.toLang].projectsInfoFirst;
   projectsInfoSecond = this.datas[this.toLang].projectsInfoSecond;
   projectsInfoThird = this.datas[this.toLang].projectsInfoThird;
+  whoIam = this.datas[this.toLang].whoIam;
+  technologies = this.datas[this.toLang].technologies;
+  reviews = this.datas[this.toLang].reviews;
 
   sites = [
     {
       name: ['Join', 'El Pollo Loco', 'DA Bubble'],
       img: ['join.png', 'elpollo.png', 'dabubble.png'],
-      description: 
-      [this.projectsInfoFirst,
+      description:
+        [this.projectsInfoFirst,
         this.projectsInfoSecond,
         this.projectsInfoThird],
-      siteLinksGit:['https://github.com/ClaudiaDaneder/Join', 'https://github.com/Trouble2701/el-polo-loco', 'https://github.com'],
-      siteLinksTest:['https://sven-friedrich.developerakademie.net/Join/', 'https://sven-friedrich.developerakademie.net/elpollo/', 'https://dabubble.ihor-tsarkov.com/'],
+      siteLinksGit: ['https://github.com/ClaudiaDaneder/Join', 'https://github.com/Trouble2701/el-polo-loco', 'https://github.com'],
+      siteLinksTest: ['https://sven-friedrich.developerakademie.net/Join/', 'https://sven-friedrich.developerakademie.net/elpollo/', 'https://dabubble.ihor-tsarkov.com/'],
     }
   ];
   constructor() {
@@ -120,6 +169,9 @@ export class DatabaseComponent {
       this.footerLang();
       this.contactMe();
       this.projectsTitle();
+      this.whoIamContent();
+      this.techContent();
+      this.reviewShow();
     }, 100)
   }
 
@@ -130,17 +182,29 @@ export class DatabaseComponent {
     this.headLine = this.datas[this.toLang].headline;
   }
 
-  contactMe(){
+  contactMe() {
     this.contact = this.datas[this.toLang].contact;
   }
 
-  projectsTitle(){
+  projectsTitle() {
     this.projects = this.datas[this.toLang].projects;
     this.projectsDes = this.datas[this.toLang].projectsDes;
     this.projectsQuest = this.datas[this.toLang].projectsQuest;
     this.projectsInfoFirst = this.datas[this.toLang].projectsInfoFirst;
     this.projectsInfoSecond = this.datas[this.toLang].projectsInfoSecond;
     this.projectsInfoThird = this.datas[this.toLang].projectsInfoThird;
+  }
+
+  whoIamContent() {
+    this.whoIam = this.datas[this.toLang].whoIam;
+  }
+
+  techContent() {
+    this.technologies = this.datas[this.toLang].technologies;
+  }
+
+  reviewShow(){
+    this.reviews = this.datas[this.toLang].reviews;
   }
 
   footerLang() {
