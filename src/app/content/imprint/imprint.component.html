@@ -5,7 +5,9 @@
             <span>Sven Plankenbichler</span>
             <span>Behringstraße 34</span>
             <span>01159 Dresden</span>
+            <a class="link" href="mailto:info@sven-plankenbichler.de">info&commat;sven-plankenbichler.de</a>
+            <a class="link" href="tel:+4915774006607">015774006607</a>
         </div>
-        <a (click)="back()">Home</a>
+        <a (click)="back()" (mouseenter)="animationOn('start')" (mouseleave)="animationOn('stop')"><span #imprintButton>Home</span></a>
     </div>    
 </div>

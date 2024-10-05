@@ -42,7 +42,7 @@ export class DatabaseComponent {
         projectsQuest: 'Worum geht es in diesem Projekt?',
         projectsInfoFirst: 'Vom Kanban-System inspirierter Aufgabenmanager. Erstellen und organisieren Sie Aufgaben mithilfe von Drag-and-Drop-Funktionen, weisen Sie Benutzer und Kategorien zu.',
         projectsInfoSecond: 'Spring-, Lauf- und Wurfspiel basierend auf einem objektorientierten Ansatz. Hilf Pepe, Münzen und Tabasco-Salsa zu finden, um gegen die verrückte Henne zu kämpfen.',
-        projectsInfoThird: 'Diese App ist eine Slack-Clone-App. Es revolutioniert die Teamkommunikation und Zusammenarbeit mit seiner intuitiven Benutzeroberfläche, Echtzeit-Messaging und einer robusten Kanalorganisation.',
+        projectsInfoThird: 'Der Pokedex liefert Informationen zu den jeweiligen Pokenmon. Derzeit werden maximal 217 Pokemon geladen um die Ladezeit zu minimieren.',
         whoIam: [
           'Wer bin ich',
           'Über mich',
@@ -100,7 +100,7 @@ export class DatabaseComponent {
         projectsQuest: 'What is this project about?',
         projectsInfoFirst: 'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
         projectsInfoSecond: 'Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.',
-        projectsInfoThird: 'This App is a Slack Clone App. It revolutionizes team communication and collaboration with its intuitive interface, real-time messaging, and robust channel organization.',
+        projectsInfoThird: 'The Pokedex provides information about the respective Pokemon. Currently, a maximum of 217 Pokemon are loaded to minimize loading time.',
         whoIam: [
           'Who I Am',
           'About Me',
@@ -148,14 +148,14 @@ export class DatabaseComponent {
 
   sites = [
     {
-      name: ['Join', 'El Pollo Loco', 'DA Bubble'],
-      img: ['join.png', 'elpollo.png', 'dabubble.png'],
+      name: ['Join', 'El Pollo Loco', 'PokeDex'],
+      img: ['join.png', 'elpollo.png', 'pokedex.png'],
       description:
         [this.projectsInfoFirst,
         this.projectsInfoSecond,
         this.projectsInfoThird],
-      siteLinksGit: ['https://github.com/ClaudiaDaneder/Join', 'https://github.com/Trouble2701/el-polo-loco', 'https://github.com'],
-      siteLinksTest: ['https://sven-friedrich.developerakademie.net/Join/', 'https://sven-friedrich.developerakademie.net/elpollo/', 'https://dabubble.ihor-tsarkov.com/'],
+      siteLinksGit: ['https://github.com/ClaudiaDaneder/Join', 'https://github.com/Trouble2701/el-polo-loco', 'https://github.com/Trouble2701/pokedex'],
+      siteLinksTest: ['https://join.sven-plankenbichler.de', 'https://elpollo.sven-plankenbichler.de', 'https://pokedex.sven-plankenbichler.de'],
     }
   ];
   constructor() {

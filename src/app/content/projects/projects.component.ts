@@ -71,7 +71,7 @@ export class ProjectsComponent {
       this.nextPage = 'third';
     }else if(data=='third'){
       number = 2;
-      this.codes = [3, 4, 5];
+      this.codes = [1, 0, 5];
       this.nextPage = 'first';
     }
 

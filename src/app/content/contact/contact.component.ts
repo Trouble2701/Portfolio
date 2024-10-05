@@ -69,7 +69,6 @@ export class ContactComponent {
           this.accept.nativeElement.setAttribute('style', 'display: flex');
         } else {
           this.accept.nativeElement.setAttribute('style', 'display: none');
-          console.log('send Mail');
         }
       }
     }

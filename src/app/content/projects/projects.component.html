@@ -5,16 +5,16 @@
         <span class="description">{{database.projectsDes}}</span>
         <div class="sites">
             <section (click)="openInfo('first')" (mouseenter)="changeStyleImg('first')" (mouseleave)="changeStyleImgBack()">
-                <span class="title">Join <img class="first" src="assets/img/icons/arrow_outward.png" #first></span>
+                <span class="title">{{database.sites[0].name[0]}} <img class="first" src="assets/img/icons/arrow_outward.png" #first></span>
                 <span class="code">Angular <p>|</p> TypeScript <p>|</p> HTML <p>|</p> CSS <p>|</p> Firebase</span>
             </section>
             <section (click)="openInfo('second')" (mouseenter)="changeStyleImg('second')" (mouseleave)="changeStyleImgBack()">
-                <span class="title">El Pollo Loco <img class="second" src="assets/img/icons/arrow_outward.png" #second></span>
+                <span class="title">{{database.sites[0].name[1]}} <img class="second" src="assets/img/icons/arrow_outward.png" #second></span>
                 <span class="code">HTML <p>|</p> CSS <p>|</p> JavaScript</span>
             </section>
             <section (click)="openInfo('third')" (mouseenter)="changeStyleImg('third')" (mouseleave)="changeStyleImgBack()">
-                <span class="title">DA Bubble <img class="third" src="assets/img/icons/arrow_outward.png" #third></span>
-                <span class="code">Angular <p>|</p> TypeScript <p>|</p> Firebase</span>
+                <span class="title">{{database.sites[0].name[2]}} <img class="third" src="assets/img/icons/arrow_outward.png" #third></span>
+                <span class="code">HTML <p>|</p> CSS <p>|</p> JavaScript</span>
             </section>
         </div>
     </div>
@@ -23,7 +23,7 @@
         <img class="firstImgBG" src="assets/img/sites/sitesCapa.png" #firstImgBG>
         <img class="secondImg" ngSrc="assets/img/sites/elpollo.png" width="295" height="192" #secondImg>
         <img class="secondImgBG" src="assets/img/sites/sitesCapa.png" #secondImgBG>
-        <img class="thirdImg" ngSrc="assets/img/sites/dabubble.png" width="295" height="192" #thirdImg>
+        <img class="thirdImg" ngSrc="assets/img/sites/pokedex.png" width="295" height="192" #thirdImg>
         <img class="thirdImgBG" src="assets/img/sites/sitesCapa.png" #thirdImgBG>
     </div>
 </div>

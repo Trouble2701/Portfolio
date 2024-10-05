@@ -3,8 +3,8 @@
     <div>
         <h1>Sven Plankenbichler</h1>
         <div>
-            <a class="headlineButton" href="#projects">{{project}}</a>
-            <a class="headlineButton" href="#contactme">{{contact}}</a>
+            <a class="headlineButton" href="#projects" (mouseenter)="animationOn('start', 'project')" (mouseleave)="animationOn('stop', 'project')"><span #projectSpan>{{project}}</span></a>
+            <a class="headlineButton" href="#contactme" (mouseenter)="animationOn('start', 'contact')" (mouseleave)="animationOn('stop', 'contact')"><span #contactSpan>{{contact}}</span></a>
         </div>
     </div>
 </div>
