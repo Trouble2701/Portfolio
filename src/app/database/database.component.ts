@@ -62,7 +62,7 @@ export class DatabaseComponent {
         ],
         reviews:[
           'Was meine Kollegen über mich sagen',
-          'test',
+          'Sven hat im Teamprojekt "Kochwelt" tolle Arbeit gemacht. Er war immer hilfsbereit, motiviert und zuverlässig. Es war eine gute Erfahrung, zusammenzuarbeiten.',
           'In unserer Projektarbeit war Sven ein unverzichtbarer und engagierter Kollege, der auch in schwierigen Situationen einen klaren Kopf behielt. Er war immer bereit, zu unterstützen, und brachte sich mit zielführenden Lösungsansätzen ein. Die Zusammenarbeit mit ihm war angenehm und durchweg konstruktiv.',
           'Test',
         ]
@@ -120,7 +120,7 @@ export class DatabaseComponent {
         ],
         reviews:[
           'What my colleagues say about me',
-          'Test',
+          'Sven did a great job in the “Kochwelt” team project. He was always helpful, motivated and reliable. It was a good experience working together.',
           'In our project work, Sven was an indispensable and committed colleague who kept a clear head even in difficult situations. He was always ready to support and contributed targeted solutions. Working with him was pleasant and consistently constructive.',
           'Test',
         ]

@@ -1,6 +1,7 @@
 <section id="aboutme">
     <div>
-        <img src="" alt="">
+        <img src="" alt="" (mouseenter)="changeStyleImg()" (mouseleave)="changeStyleImgBack()">
+        <img class="ImgBG" src="assets/img/sites/aboutMeCapa.png" #ImgBG>
         <div class="personInfo">
             <span>{{database.whoIam[0]}}</span>
             <div class="aboutMe">

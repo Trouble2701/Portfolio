@@ -23,6 +23,7 @@ div {
             font-family: 'Karla';
             font-size: 102px;
             font-weight: 700;
+            text-align: center;
         }
 
         height: 216px;
@@ -61,5 +62,85 @@ div {
                 }
             }
         }
+    }
+}
+
+@media (max-width: 1370px) {
+    div {
+        width: 70vw;
+        height: 350px;
+
+        >div {
+            height: 280px;
+
+            >h1{
+                height: 220px;
+            }
+        }
+
+    }
+}
+
+@media (max-width: 1020px) {
+    div {
+        >div {
+            >h1{
+                font-size: 80px;
+            }
+        }
+
+    }
+}
+
+@media (max-width: 855px) {
+    div {
+        >span{
+            font-size: 30px;
+        }
+        >div {
+            >h1{
+                font-size: 60px;
+            }
+        }
+
+    }
+}
+
+@media (max-width: 660px) {
+    div {
+        height: 260px;
+        >span{
+            font-size: 20px;
+        }
+        >div {
+            height: 200px;
+            >h1{
+                font-size: 40px;
+            }
+        }
+
+    }
+}
+
+@media (max-width: 550px) {
+    div {
+      height: 210px;
+      
+      >span{
+        font-size: 18px;
+      }
+      
+      >div{
+        height: 170px;
+        gap: 20px;
+
+        >div{
+            width: 85vw;
+            gap: 20px;
+            .headlineButton{
+                font-size: 16px;
+            }
+        }
+      }
     }
 }

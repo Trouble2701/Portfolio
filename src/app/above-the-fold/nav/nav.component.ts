@@ -1,4 +1,4 @@
-import { Component, ElementRef, inject, ViewChild } from '@angular/core';
+import { Component, ElementRef, inject, ViewChild, HostListener } from '@angular/core';
 import { DatabaseComponent } from '../../database/database.component';
 import { NgClass } from '@angular/common';
 
@@ -13,7 +13,13 @@ export class NavComponent {
 
   database = inject(DatabaseComponent);
   @ViewChild('background') background: ElementRef | any;
+  @ViewChild('backgroundMobile') backgroundMobile: ElementRef | any;
   @ViewChild('dotNav') dotLink: ElementRef | any;
+  @ViewChild('menuMobile') menuMobile: ElementRef | any;
+  @ViewChild('showMenu') showMenu: ElementRef | any;
+  @ViewChild('blackBack') blackBack: ElementRef | any;
+
+  menuIsOpen: number = 0;
 
   constructor() {
     this.siteLang();
@@ -28,24 +34,54 @@ export class NavComponent {
   siteLangEN() {
     this.database.languarge = 'EN';
     this.background.nativeElement.setAttribute('style', 'left: -1px');
+    this.backgroundMobile.nativeElement.setAttribute('style', 'left: -1px');
   }
 
   siteLangDE() {
     this.database.languarge = 'DE';
     this.background.nativeElement.setAttribute('style', 'left: 42px');
+    this.backgroundMobile.nativeElement.setAttribute('style', 'left: 42px');
   }
 
-  dotNavChange(number:number):void{
-    let Number = (152*number);
-    let leftSide = 65+Number;
-    this.dotLink.nativeElement.setAttribute('style', 'display:flex; left:'+leftSide+'px');
+  dotNavChange(number: number): void {
+    let Number = (152 * number);
+    let leftSide = 65 + Number;
+    this.dotLink.nativeElement.setAttribute('style', 'display:flex; left:' + leftSide + 'px');
   }
 
-  dotNavOut(){
+  dotNavOut() {
     this.dotLink.nativeElement.setAttribute('style', 'display:none');
   }
 
-  reload(){
+  reload() {
     location.reload();
+  }
+
+  mobileMenu() {
+    this.menuMobile.nativeElement.setAttribute('src', 'assets/img/icons/menuMobileWhite.png');
+  }
+
+  mobileMenuDont() {
+    this.menuMobile.nativeElement.setAttribute('src', 'assets/img/icons/menuMobile.png');
+  }
+
+  openMenu() {
+    this.menuIsOpen = this.menuIsOpen == 0 ? 1 : 0;
+    this.showMenu.nativeElement.setAttribute('style', this.menuIsOpen == 1 ? 'display: flex' : 'display: none');
+    this.blackBack.nativeElement.setAttribute('style', this.menuIsOpen == 1 ? 'display: flex' : 'display: none');
+  }
+
+  onEvent(event: any): void {
+    event.stopPropagation();
+ }
+
+  @HostListener('window:resize', ['$event.target.innerWidth'])
+  onResize(width: number) {
+
+    if (width >= 1000) {
+      this.menuIsOpen = 0;
+      this.showMenu.nativeElement.setAttribute('style', 'display: none');
+      this.blackBack.nativeElement.setAttribute('style', 'display: none');
+    }
   }
 }

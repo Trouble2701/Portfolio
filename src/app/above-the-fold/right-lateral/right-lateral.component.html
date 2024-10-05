@@ -1,6 +1,7 @@
 <div>
     <div class="email">
-        <a href="mailto:info@sven-plankenbichler.de">info&#64;sven-plankenbichler.de</a>
+        <a class="contact" href="mailto:info@sven-plankenbichler.de">info&#64;sven-plankenbichler.de</a>
+        <a class="contactIMG" href="mailto:info@sven-plankenbichler.de"><img #mailIMG src="assets/img/icons/contact.png" (mouseover)="changeMailOn()" (mouseout)="changeMailOff()"> <div class="dotMail" #mailTo></div></a>
     </div>
     <div class="links">
         <a href="https://github.com/Trouble2701?tab=repositories" title="My Github" target="_blank"><img #myGithub (mouseover)="changeGithubOn()" (mouseout)="changeGithubOff()" src="assets/img/icons/Github.png"> <div class="dotGit" #dotGit></div></a>

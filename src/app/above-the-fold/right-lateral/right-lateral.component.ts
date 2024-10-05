@@ -13,6 +13,8 @@ export class RightLateralComponent {
   @ViewChild('myLinkedIn') myLinkedIn: ElementRef | any;
   @ViewChild('dotGit') dotGit: ElementRef | any;
   @ViewChild('dotLink') dotLink: ElementRef | any;
+  @ViewChild('mailTo') mailTo: ElementRef | any;
+  @ViewChild('mailIMG') mailIMG: ElementRef | any;
 
   constructor(){}
 
@@ -34,5 +36,15 @@ export class RightLateralComponent {
   changeLinkedInOff(){
     this.myLinkedIn.nativeElement.src = 'assets/img/icons/Linkedin.png';
     this.dotLink.nativeElement.setAttribute('style', 'display:none');
+  }
+
+  changeMailOn(){
+    this.mailIMG.nativeElement.src = 'assets/img/icons/contactWhite.png';
+    this.mailTo.nativeElement.setAttribute('style', 'display:flex');
+  }
+
+  changeMailOff(){
+    this.mailIMG.nativeElement.src = 'assets/img/icons/contact.png';
+    this.mailTo.nativeElement.setAttribute('style', 'display:none');
   }
 }

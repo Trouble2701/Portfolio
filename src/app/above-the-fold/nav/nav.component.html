@@ -21,3 +21,30 @@
         <img src="assets/img/logo/name.png">
     </div>
 </nav>
+
+<div class="blackBack" (click)="openMenu()" #blackBack></div>
+
+<nav class="mobile">
+    <div (click)="reload()" class="logoMobile">
+        <img src="assets/img/logo/initials.png">
+    </div>
+    <img class="menuMobile" src="assets/img/icons/menuMobile.png" (click)="openMenu()" (mouseenter)="mobileMenu()" (mouseleave)="mobileMenuDont()" #menuMobile>
+</nav>
+
+<div class="menuShow" (click)="onEvent($event)" #showMenu>
+    <div class="sitelinksMobile">
+        @for(navLinks of database.navBar; track navLinks; let i = $index){
+            <div class="navLinksMobile">
+                <a href="#{{database.datas[1].navBar[i].toLowerCase().replace(' ', '')}}" (click)="openMenu()" (mouseover)="dotNavChange(i)" (mouseout)="dotNavOut()">{{navLinks}}</a>
+                <div class="dotNav" #dotNav></div>
+            </div>
+        }
+    </div>
+    <div class="langMobile">
+        <div class="markedBackgroundMobile">
+            <div class="markerMobile" #backgroundMobile></div>
+        </div>
+        <div [ngClass]="{'markedMobile' : database.languarge == 'EN'}" (click)="siteLangEN(); openMenu()">EN</div>
+        <div [ngClass]="{'markedMobile' : database.languarge == 'DE'}" (click)="siteLangDE(); openMenu()">DE</div>
+    </div>
+</div>

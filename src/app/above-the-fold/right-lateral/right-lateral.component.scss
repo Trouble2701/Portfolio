@@ -20,7 +20,7 @@ div {
         width: 260px;
         height: 22px;
 
-        >a{
+        .contact{
             color: #FFFFFF;
             font-family: 'Karla';
             font-weight: 400;
@@ -32,6 +32,10 @@ div {
             &:hover{
                 color: #3DCFB6;
             }
+        }
+
+        .contactIMG{
+            display: none;
         }
     }
 
@@ -93,4 +97,38 @@ div {
     position: absolute;
     top: 56px;
     left: 40px;
+}
+
+.dotMail{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 8px;
+    height: 8px;
+    border-radius: 4px;
+    background-color: #3DCFB6;
+    position: absolute;
+    top: 16px;
+    left: 45px;
+}
+
+@media (max-width: 660px){
+div{
+    height: 330px;
+
+    .email{
+        height: 40px;
+        width: 40px;
+        transform: rotate(0deg);
+        bottom: 292px;
+
+        .contact{
+            display: none;
+        }
+    
+        .contactIMG{
+            display: flex;
+        }
+    }
+}
 }
