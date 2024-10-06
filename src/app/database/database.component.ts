@@ -64,7 +64,7 @@ export class DatabaseComponent {
           'Was meine Kollegen über mich sagen',
           'Sven hat im Teamprojekt "Kochwelt" tolle Arbeit gemacht. Er war immer hilfsbereit, motiviert und zuverlässig. Es war eine gute Erfahrung, zusammenzuarbeiten.',
           'In unserer Projektarbeit war Sven ein unverzichtbarer und engagierter Kollege, der auch in schwierigen Situationen einen klaren Kopf behielt. Er war immer bereit, zu unterstützen, und brachte sich mit zielführenden Lösungsansätzen ein. Die Zusammenarbeit mit ihm war angenehm und durchweg konstruktiv.',
-          'Test',
+          'Ich kann auf eine super Zusammenarbeit mit den beiden Teilnehmer der Developer Akademie Gabor und Sven zurückblicken. Die beiden Kollegen konnten mit ihrem Vorsprung in JavaScript und ihren angeeigneten Kenntnissen zum rechtzeitigen Abschluss des gelungenen Projektes „Kochwelt“ beitragen',
         ]
       },
       {
@@ -122,7 +122,7 @@ export class DatabaseComponent {
           'What my colleagues say about me',
           'Sven did a great job in the “Kochwelt” team project. He was always helpful, motivated and reliable. It was a good experience working together.',
           'In our project work, Sven was an indispensable and committed colleague who kept a clear head even in difficult situations. He was always ready to support and contributed targeted solutions. Working with him was pleasant and consistently constructive.',
-          'Test',
+          'I can look back on a great collaboration with the two participants of the Developer Academy, Gabor and Sven. With their advantage in JavaScript and the knowledge they acquired, the two colleagues were able to contribute to the timely completion of the successful "Kochwelt" project.',
         ]
       }
     ];
@@ -193,6 +193,9 @@ export class DatabaseComponent {
     this.projectsInfoFirst = this.datas[this.toLang].projectsInfoFirst;
     this.projectsInfoSecond = this.datas[this.toLang].projectsInfoSecond;
     this.projectsInfoThird = this.datas[this.toLang].projectsInfoThird;
+    this.sites[0].description[0] = this.projectsInfoFirst;
+    this.sites[0].description[1] = this.projectsInfoSecond;
+    this.sites[0].description[2] = this.projectsInfoThird;
   }
 
   whoIamContent() {

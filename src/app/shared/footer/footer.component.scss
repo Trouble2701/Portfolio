@@ -102,4 +102,55 @@ footer {
             }
         }
     }
+
+    .copyrightMobile {
+        display: none;
+        justify-content: center;
+        align-items: center;
+        color: #3DCFB6;
+        font-family: 'Fira Code';
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 21.6px;
+    }
+}
+
+@media (max-width: 1300px){
+    footer{
+        >div{
+            width: 95vw;
+        }
+    }   
+}
+
+@media (max-width: 830px){
+    footer{
+        flex-direction: column;
+        justify-content: space-evenly;
+        height: 300px;
+        margin-top: 80px;
+        >div{
+            .copyright{
+                display: none;
+            }
+        }
+
+        .copyrightMobile{
+            display: flex;
+        }
+    }   
+}
+
+@media (max-width: 370px){
+    footer{
+        >div{
+            .footerName{
+                .footerLeftImg{
+                    .name{
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
 }

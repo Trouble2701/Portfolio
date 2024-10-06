@@ -1,4 +1,4 @@
-div{
+div {
     width: 1440px;
     height: 452px;
     margin-top: 144px;
@@ -8,7 +8,7 @@ div{
     flex-direction: column;
     position: relative;
 
-    >h1{
+    >h1 {
         font-family: 'Fira Code';
         font-weight: 700;
         font-size: 32px;
@@ -16,7 +16,7 @@ div{
         color: #3DCFB6;
     }
 
-    .allReviews{
+    .allReviews {
         width: 1440px;
         height: 300px;
         display: flex;
@@ -29,7 +29,16 @@ div{
         transition: all 125ms ease-in-out;
         position: relative;
 
-        .leftReview{
+        .quotes {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            margin-left: -300px;
+            top: 70px;
+            z-index: 2;
+        }
+
+        .leftReview {
             display: flex;
             justify-content: center;
             align-items: center;
@@ -45,7 +54,7 @@ div{
             transition: all 300ms ease-in-out;
         }
 
-        .showReview{
+        .showReview {
             display: flex;
             justify-content: center;
             align-items: center;
@@ -60,7 +69,7 @@ div{
             transition: all 300ms ease-in-out;
         }
 
-        .rightReview{
+        .rightReview {
             display: flex;
             justify-content: center;
             align-items: center;
@@ -76,7 +85,7 @@ div{
         }
     }
 
-    .allReviewsFront{
+    .allReviewsFront {
         height: 276px;
         width: 2014px;
         position: absolute;
@@ -85,7 +94,7 @@ div{
         z-index: 1;
     }
 
-    .arrow{
+    .arrow {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -95,14 +104,14 @@ div{
         gap: 20px;
         top: 100px;
 
-        >img{
+        >img {
             width: 40px;
             height: 40px;
             transition: all 125ms ease-in-out;
             cursor: pointer;
         }
 
-        .dot{
+        .dot {
             display: flex;
             justify-content: center;
             align-items: center;
@@ -115,18 +124,18 @@ div{
     }
 }
 
-.reviewText{
+.reviewText {
     width: 552px;
     height: 112px;
     font-family: 'Karla';
-    font-weight: 400px;
+    font-weight: 400;
     font-size: 20px;
     line-height: 24px;
     color: #FFFFFF;
     margin-top: 0;
 }
 
-.user{
+.user {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -136,7 +145,7 @@ div{
     gap: 16px;
     margin-top: 0;
 
-    .line{
+    .line {
         width: 335px;
         height: 0;
         border: 1px solid #FFFFFF;
@@ -144,11 +153,85 @@ div{
         margin-top: 0;
     }
 
-    .name{
+    .name {
         font-family: 'Karla';
         font-weight: 400;
         font-size: 18px;
         line-height: 21.6px;
         color: #FFFFFF;
+    }
+}
+
+@media (max-width: 700px) {
+    div {
+        width: 983px;
+
+        >h1 {
+            width: 95vw;
+            text-align: center;
+        }
+
+        .allReviews {
+            width: 100%;
+
+            .quotes {
+                margin-left: -140px;
+                top: 15px;
+            }
+
+            .leftReview {
+                min-height: 333px;
+                max-height: 334px;
+                min-width: 305px !important;
+                max-width: 306px !important;
+            }
+
+            .showReview {
+                min-height: 359px;
+                max-height: 360px;
+                min-width: 305px !important;
+                max-width: 306px !important;
+            }
+
+            .rightReview {
+                min-height: 333px;
+                max-height: 334px;
+                min-width: 305px !important;
+                max-width: 306px !important;
+            }
+        }
+
+        .arrow {
+            top: 0;
+        }
+    }
+
+    .reviewText {
+        width: 90%;
+        height: unset;
+        font-size: 16px;
+    }
+
+    .user {
+        width: 90%;
+
+        .line {
+            width: 20%;
+        }
+
+        .name {
+            font-size: 16px;
+        }
+    }
+}
+
+@media (max-width: 370px) {
+    div {
+        .allReviews {
+
+            .quotes {
+                margin-left: -120px;
+            }
+        }
     }
 }
