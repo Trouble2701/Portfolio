@@ -1,4 +1,5 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Component, ElementRef, inject, ViewChild } from '@angular/core';
+import { DatabaseComponent } from '../../database/database.component';
 
 @Component({
   selector: 'app-imprint',
@@ -9,7 +10,7 @@ import { Component, ElementRef, ViewChild } from '@angular/core';
 })
 export class ImprintComponent {
 
-
+  database = inject(DatabaseComponent);
   intervalID: any;
   translateX: number = 0;
   direction: number = 1;

@@ -4,6 +4,7 @@ div {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 5px;
 
     .impressum {
         width: 1248px;
@@ -80,5 +81,27 @@ div {
 
     &:hover {
         color: #3DCFB6;
+    }
+}
+
+@media (max-width: 1300px){
+    div{
+        width: 95vw;
+        .impressum{
+            width: 100%;
+        }
+    }
+}
+
+@media (max-width: 400px){
+    div {
+    
+        .impressum {
+    
+            .header {
+                font-size: 50px;
+                line-height: 50px;
+            }
+        }
     }
 }

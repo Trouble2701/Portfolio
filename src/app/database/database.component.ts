@@ -35,7 +35,8 @@ export class DatabaseComponent {
           "Ich habe die ",
           'Datenschutzerklärung',
           'gelesen und stimme der darin beschriebenen Verarbeitung meiner Daten zu.',
-          'Sagen Sie Hallo'
+          'Sagen Sie Hallo',
+          'Nachricht wurde gesendet',
         ],
         projects: 'Ausgeählte Projekte',
         projectsDes: 'Entdecken Sie hier eine Auswahl meiner Arbeiten – interagieren Sie mit Projekte, um meine Fähigkeiten in Aktion zu sehen',
@@ -60,12 +61,12 @@ export class DatabaseComponent {
           'Kontaktieren Sie mich gerne. Ich freue mich darauf, mein bisheriges Wissen zu erweitern.',
           'Schreiben sie mir',
         ],
-        reviews:[
+        reviews: [
           'Was meine Kollegen über mich sagen',
           'Sven hat im Teamprojekt "Kochwelt" tolle Arbeit gemacht. Er war immer hilfsbereit, motiviert und zuverlässig. Es war eine gute Erfahrung, zusammenzuarbeiten.',
           'In unserer Projektarbeit war Sven ein unverzichtbarer und engagierter Kollege, der auch in schwierigen Situationen einen klaren Kopf behielt. Er war immer bereit, zu unterstützen, und brachte sich mit zielführenden Lösungsansätzen ein. Die Zusammenarbeit mit ihm war angenehm und durchweg konstruktiv.',
           'Ich kann auf eine super Zusammenarbeit mit den beiden Teilnehmer der Developer Akademie Gabor und Sven zurückblicken. Die beiden Kollegen konnten mit ihrem Vorsprung in JavaScript und ihren angeeigneten Kenntnissen zum rechtzeitigen Abschluss des gelungenen Projektes „Kochwelt“ beitragen',
-        ]
+        ],
       },
       {
         myInfo: ['Frontend Developer', 'Based in Dresden', 'Available for remote work'],
@@ -91,9 +92,10 @@ export class DatabaseComponent {
           'What do you need to develop?',
           'Please Accept the private policy',
           "I've read the ",
-          'privacy policy',
+          'Privacy Policy',
           'and agree to the processing of my data as outlined.',
-          'Say Hello'
+          'Say Hello',
+          'Message was sent',
         ],
         projects: 'Featured Projects',
         projectsDes: 'Explore a selection of my work here - interact with projects to see my skills in action',
@@ -118,99 +120,99 @@ export class DatabaseComponent {
           'Feel free to contact me. I look forward to expanding on my previous knowledge.',
           "Let's Talk",
         ],
-        reviews:[
+        reviews: [
           'What my colleagues say about me',
           'Sven did a great job in the “Kochwelt” team project. He was always helpful, motivated and reliable. It was a good experience working together.',
           'In our project work, Sven was an indispensable and committed colleague who kept a clear head even in difficult situations. He was always ready to support and contributed targeted solutions. Working with him was pleasant and consistently constructive.',
           'I can look back on a great collaboration with the two participants of the Developer Academy, Gabor and Sven. With their advantage in JavaScript and the knowledge they acquired, the two colleagues were able to contribute to the timely completion of the successful "Kochwelt" project.',
-        ]
+        ],
       }
     ];
 
-  codearts = ['CSS', 'HTML', 'Firebase', 'Angular', 'TypeScript', 'JavaScript'];
-  languarge = 'DE';
-  toLang = 0;
-  myInfo = this.datas[this.toLang].myInfo;
-  navBar = this.datas[this.toLang].navBar;
-  legalNotice = this.datas[this.toLang].legalNotice;
-  frontend = this.datas[this.toLang].frontend;
-  contact = this.datas[this.toLang].contact;
-  headLine = this.datas[this.toLang].headline;
-  projects = this.datas[this.toLang].projects;
-  projectsDes = this.datas[this.toLang].projectsDes;
-  projectsQuest = this.datas[this.toLang].projectsQuest;
-  projectsInfoFirst = this.datas[this.toLang].projectsInfoFirst;
-  projectsInfoSecond = this.datas[this.toLang].projectsInfoSecond;
-  projectsInfoThird = this.datas[this.toLang].projectsInfoThird;
-  whoIam = this.datas[this.toLang].whoIam;
-  technologies = this.datas[this.toLang].technologies;
-  reviews = this.datas[this.toLang].reviews;
+codearts = ['CSS', 'HTML', 'Firebase', 'Angular', 'TypeScript', 'JavaScript'];
+languarge = 'DE';
+toLang = 0;
+myInfo = this.datas[this.toLang].myInfo;
+navBar = this.datas[this.toLang].navBar;
+legalNotice = this.datas[this.toLang].legalNotice;
+frontend = this.datas[this.toLang].frontend;
+contact = this.datas[this.toLang].contact;
+headLine = this.datas[this.toLang].headline;
+projects = this.datas[this.toLang].projects;
+projectsDes = this.datas[this.toLang].projectsDes;
+projectsQuest = this.datas[this.toLang].projectsQuest;
+projectsInfoFirst = this.datas[this.toLang].projectsInfoFirst;
+projectsInfoSecond = this.datas[this.toLang].projectsInfoSecond;
+projectsInfoThird = this.datas[this.toLang].projectsInfoThird;
+whoIam = this.datas[this.toLang].whoIam;
+technologies = this.datas[this.toLang].technologies;
+reviews = this.datas[this.toLang].reviews;
 
-  sites = [
-    {
-      name: ['Join', 'El Pollo Loco', 'PokeDex'],
-      img: ['join.png', 'elpollo.png', 'pokedex.png'],
-      description:
-        [this.projectsInfoFirst,
-        this.projectsInfoSecond,
-        this.projectsInfoThird],
-      siteLinksGit: ['https://github.com/ClaudiaDaneder/Join', 'https://github.com/Trouble2701/el-polo-loco', 'https://github.com/Trouble2701/pokedex'],
-      siteLinksTest: ['https://join.sven-plankenbichler.de', 'https://elpollo.sven-plankenbichler.de', 'https://pokedex.sven-plankenbichler.de'],
-    }
-  ];
-  constructor() {
-    this.setLang();
+sites = [
+  {
+    name: ['Join', 'El Pollo Loco', 'PokeDex'],
+    img: ['join.png', 'elpollo.png', 'pokedex.png'],
+    description:
+      [this.projectsInfoFirst,
+      this.projectsInfoSecond,
+      this.projectsInfoThird],
+    siteLinksGit: ['https://github.com/ClaudiaDaneder/Join', 'https://github.com/Trouble2701/el-polo-loco', 'https://github.com/Trouble2701/pokedex'],
+    siteLinksTest: ['https://join.sven-plankenbichler.de', 'https://elpollo.sven-plankenbichler.de', 'https://pokedex.sven-plankenbichler.de'],
   }
+];
+constructor() {
+  this.setLang();
+}
 
-  setLang() {
-    setInterval(() => {
-      this.toLang = this.languarge == 'DE' ? 0 : 1;
-      this.headerLang();
-      this.footerLang();
-      this.contactMe();
-      this.projectsTitle();
-      this.whoIamContent();
-      this.techContent();
-      this.reviewShow();
-    }, 100)
-  }
+setLang() {
+  setInterval(() => {
+    this.toLang = this.languarge == 'DE' ? 0 : 1;
+    this.headerLang();
+    this.footerLang();
+    this.contactMe();
+    this.projectsTitle();
+    this.whoIamContent();
+    this.techContent();
+    this.reviewShow();
+  }, 100)
+}
 
-  headerLang() {
-    this.myInfo = this.datas[this.toLang].myInfo;
-    this.navBar = this.datas[this.toLang].navBar;
-    this.frontend = this.datas[this.toLang].frontend;
-    this.headLine = this.datas[this.toLang].headline;
-  }
+headerLang() {
+  this.myInfo = this.datas[this.toLang].myInfo;
+  this.navBar = this.datas[this.toLang].navBar;
+  this.frontend = this.datas[this.toLang].frontend;
+  this.headLine = this.datas[this.toLang].headline;
+}
 
-  contactMe() {
-    this.contact = this.datas[this.toLang].contact;
-  }
+contactMe() {
+  this.contact = this.datas[this.toLang].contact;
+}
 
-  projectsTitle() {
-    this.projects = this.datas[this.toLang].projects;
-    this.projectsDes = this.datas[this.toLang].projectsDes;
-    this.projectsQuest = this.datas[this.toLang].projectsQuest;
-    this.projectsInfoFirst = this.datas[this.toLang].projectsInfoFirst;
-    this.projectsInfoSecond = this.datas[this.toLang].projectsInfoSecond;
-    this.projectsInfoThird = this.datas[this.toLang].projectsInfoThird;
-    this.sites[0].description[0] = this.projectsInfoFirst;
-    this.sites[0].description[1] = this.projectsInfoSecond;
-    this.sites[0].description[2] = this.projectsInfoThird;
-  }
+projectsTitle() {
+  this.projects = this.datas[this.toLang].projects;
+  this.projectsDes = this.datas[this.toLang].projectsDes;
+  this.projectsQuest = this.datas[this.toLang].projectsQuest;
+  this.projectsInfoFirst = this.datas[this.toLang].projectsInfoFirst;
+  this.projectsInfoSecond = this.datas[this.toLang].projectsInfoSecond;
+  this.projectsInfoThird = this.datas[this.toLang].projectsInfoThird;
+  this.sites[0].description[0] = this.projectsInfoFirst;
+  this.sites[0].description[1] = this.projectsInfoSecond;
+  this.sites[0].description[2] = this.projectsInfoThird;
+}
 
-  whoIamContent() {
-    this.whoIam = this.datas[this.toLang].whoIam;
-  }
+whoIamContent() {
+  this.whoIam = this.datas[this.toLang].whoIam;
+}
 
-  techContent() {
-    this.technologies = this.datas[this.toLang].technologies;
-  }
+techContent() {
+  this.technologies = this.datas[this.toLang].technologies;
+}
 
-  reviewShow(){
-    this.reviews = this.datas[this.toLang].reviews;
-  }
+reviewShow(){
+  this.reviews = this.datas[this.toLang].reviews;
+}
 
-  footerLang() {
-    this.legalNotice = this.datas[this.toLang].legalNotice;
-  }
+footerLang() {
+  this.legalNotice = this.datas[this.toLang].legalNotice;
+}
 }

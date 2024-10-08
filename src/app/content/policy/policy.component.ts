@@ -1,4 +1,5 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Component, ElementRef, ViewChild, inject } from '@angular/core';
+import { DatabaseComponent } from '../../database/database.component';
 
 @Component({
   selector: 'app-policy',
@@ -9,7 +10,7 @@ import { Component, ElementRef, ViewChild } from '@angular/core';
 })
 export class PolicyComponent {
 
-
+  database = inject(DatabaseComponent)
   @ViewChild('top') top: ElementRef | any;
   @ViewChild('bottom') bottom: ElementRef | any;
 

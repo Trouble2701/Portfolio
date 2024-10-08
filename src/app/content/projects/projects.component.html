@@ -47,11 +47,14 @@
             <div class="siteLinks">
                 <a href="{{siteLinksGit}}" target="_blank">Github<img src="assets/img/icons/arrow_outwardgreen.png"></a><a href="{{siteLinksTest}}" target="_blank">Live Test<img src="assets/img/icons/arrow_outwardgreen.png"></a>
             </div>
-            <div class="nextProjectMobile" (click)="openInfo(nextPage)"><span>Next Project</span><img src="assets/img/icons/arrows.png"></div>
+            <div class="smalHight">
+                <div class="closedIconSmalHeight" (click)="closeInfo()" #closeHeight><img class="closeSmall" src="assets/img/icons/close_small.png" ><img class="close" src="assets/img/icons/close.png"></div>
+                <div class="nextProjectMobile" (click)="openInfo(nextPage)"><span>Next Project</span><img src="assets/img/icons/arrows.png"></div>
+            </div>
         </div>
-        <div class="siteRight">
-            <div class="closedIcon" (click)="closeInfo()"><img class="closeSmall" src="assets/img/icons/close_small.png"><img class="close" src="assets/img/icons/close.png"></div>
-            <img ngSrc="assets/img/sites/{{img}}" width="520" height="320">
+        <div class="siteRight" #siteRigth>
+            <div class="closedIcon" (click)="closeInfo()" #closeWidth><img class="closeSmall" src="assets/img/icons/close_small.png"><img class="close" src="assets/img/icons/close.png"></div>
+            <img ngSrc="assets/img/sites/{{img}}" width="520" height="320" #siteImg>
             <div class="nextProject" (click)="openInfo(nextPage)"><span>Next Project</span><img src="assets/img/icons/arrows.png"></div>
         </div>
     </div>

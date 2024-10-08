@@ -23,6 +23,10 @@ export class ProjectsComponent {
   @ViewChild('secondImgBG') secondImgBG: ElementRef | any;
   @ViewChild('thirdImgBG') thirdImgBG: ElementRef | any;
   @ViewChild('info') info: ElementRef | any;
+  @ViewChild('siteImg') siteImg: ElementRef | any;
+  @ViewChild('closeWidth')  closeWidth: ElementRef | any;
+  @ViewChild('closeHeight') closeHeight: ElementRef | any;
+  @ViewChild('siteRigth') siteRigth: ElementRef | any;
   @Input() siteNr: string = '';
   @Input() siteName: string = '';
   @Input() description: any = '';
@@ -34,7 +38,28 @@ export class ProjectsComponent {
   codes: any[] = [];
   screenWidth: number = 1271;
   constructor(){
-  
+    setInterval(() => this.checkWidth(), 100);
+  }
+
+  checkWidth(){
+    if(window.innerWidth > window.innerHeight && window.innerWidth > 1300){
+      this.closeWidth.nativeElement.setAttribute('style', 'display:flex');
+      this.closeHeight.nativeElement.setAttribute('style', 'display:none');
+      if(window.innerHeight > 800){
+        this.siteImg.nativeElement.setAttribute('style', 'display: flex; width: 520px; height: unset');
+        this.siteRigth.nativeElement.setAttribute('style', 'height: 555px');
+      }else{
+        this.siteImg.nativeElement.setAttribute('style', 'display: flex; width: unset; height: 280px');
+        this.siteRigth.nativeElement.setAttribute('style', 'height: 100%');
+      }
+    }else if(window.innerWidth < window.innerHeight && window.innerHeight > 900){
+      this.siteImg.nativeElement.setAttribute('style', 'display: flex');
+      this.closeWidth.nativeElement.setAttribute('style', 'display:none');
+      this.closeHeight.nativeElement.setAttribute('style', 'display:flex');
+    }else{
+      this.siteImg.nativeElement.setAttribute('style', 'display: none');
+      this.closeHeight.nativeElement.setAttribute('style', 'display:flex');
+    }
   }
 
   changeStyleImg(data: string) {
