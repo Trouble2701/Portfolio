@@ -52,12 +52,13 @@ export class ProjectsComponent {
         this.siteImg.nativeElement.setAttribute('style', 'display: flex; width: unset; height: 280px');
         this.siteRigth.nativeElement.setAttribute('style', 'height: 100%');
       }
-    }else if(window.innerWidth < window.innerHeight && window.innerHeight > 900){
+    }else if(window.innerWidth < window.innerHeight && window.innerHeight > 935){
       this.siteImg.nativeElement.setAttribute('style', 'display: flex');
       this.closeWidth.nativeElement.setAttribute('style', 'display:none');
       this.closeHeight.nativeElement.setAttribute('style', 'display:flex');
     }else{
       this.siteImg.nativeElement.setAttribute('style', 'display: none');
+      this.closeWidth.nativeElement.setAttribute('style', 'display:none');
       this.closeHeight.nativeElement.setAttribute('style', 'display:flex');
     }
   }

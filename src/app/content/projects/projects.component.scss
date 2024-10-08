@@ -190,7 +190,7 @@ div {
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 3;
+    z-index: 6;
     margin: 0;
 
     .showSiteInfo {
@@ -500,10 +500,9 @@ div {
         .showSiteInfo {
             flex-direction: column-reverse;
             width: 72%;
-            height: 860px;
             position: relative;
             margin-top: 0;
-            height: 93%;
+            height: 85%;
 
             .siteLeft {
                 height: 540px;
