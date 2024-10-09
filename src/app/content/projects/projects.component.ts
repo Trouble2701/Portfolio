@@ -56,9 +56,9 @@ export class ProjectsComponent {
     if (window.innerHeight > 800) {
       this.highWidth();
     } else if (window.innerHeight < 560) {
-      this.changeAttribute('height: 470px', 'display:flex;height: 100%', 'display: flex; width: unset; height: 216px', 'height: 85%');
+      this.changeAttribute('height: 470px', 'display:flex;height: 80%', 'display: flex; width: unset; height: 216px', 'height: 85%; padding: 20px');
     } else if (window.innerHeight >= 542 && window.innerHeight < 801) {
-      this.changeAttribute('height: 470px', 'display:flex;height: 470px', 'display: flex; width: unset; height: 280px', 'height: 500px');
+      this.changeAttribute('height: 470px', 'display:flex;height: 470px', 'display: flex; width: unset; height: 216px', 'height: 80%; padding: 40px');
     }
   }
 
@@ -70,7 +70,7 @@ export class ProjectsComponent {
     } else if (window.innerWidth <= 1300 && window.innerHeight < 861) {
       this.changeAttribute('height: 470px', 'display:none; height: 470px', 'display: none', 'height: 80%; width: 72%; padding: 20px')
     } else if (window.innerWidth > 1300 && window.innerHeight < 861) {
-      this.changeAttribute('height: 555px', 'display:flex; height: 555px', 'display: flex; width: unset; height: 280px', 'height: 80%; width: 1095; padding: 20px')
+      this.changeAttribute('height: 555px', 'display:flex; height: 555px', 'display: flex; width: unset; height: 216px', 'height: 80%; width: 1095; padding: 20px')
     }
   }
 
@@ -128,8 +128,8 @@ export class ProjectsComponent {
   }
 
   changeCloseTag(closeW: string, closeH: string) {
-    this.closeWidth.nativeElement.setAttribute('style', 'display:', closeW);
-    this.closeHeight.nativeElement.setAttribute('style', 'display:', closeH);
+    this.closeWidth.nativeElement.setAttribute('style', 'display:'+closeW+'');
+    this.closeHeight.nativeElement.setAttribute('style', 'display:'+closeH+'');
   }
 
   changeStyleImg(data: string) {
