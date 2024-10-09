@@ -702,6 +702,9 @@ div {
 }
 
 @media (max-width: 410px) {
+    div {
+        margin-top: 210px;
+    }
     .showSiteInfoBackground {
         .showSiteInfo {
             width: 80%;
@@ -726,11 +729,24 @@ div {
 
 @media (max-width: 360px) {
     div {
-        margin-top: 200px;
+        margin-top: 230px;
     }
 }
 
-@media (max-width: 320px) {
+@media (max-width: 350px) {
+    div {
+        margin-top: 280px;
+    }
+}
+
+
+@media (max-width: 340px) {
+    div {
+        margin-top: 280px;
+    }
+}
+
+@media (max-width: 330px) {
     div {
         margin-top: 350px;
     }

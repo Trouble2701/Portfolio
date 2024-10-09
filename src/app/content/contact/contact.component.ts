@@ -54,6 +54,7 @@ export class ContactComponent {
   typeEmail: boolean = false;
   typeMessage: boolean = false;
   clickCheckBox: boolean = false;
+  disable:boolean = true;
 
   contactData = {
     name: '',
@@ -61,8 +62,8 @@ export class ContactComponent {
     message: '',
   }
 
-  mailTest = false;
-
+  mailTest = true;
+  
   post = {
     endPoint: 'https://sven-plankenbichler.de/sendmail.php',
     body: (payload: any) => JSON.stringify(payload),
@@ -85,9 +86,9 @@ export class ContactComponent {
 
   checkInput() {
     if (this.typeName && this.typeEmail && this.typeMessage && this.checkBoxCheck.nativeElement.checked) {
-      this.buttonActiv.nativeElement.setAttribute('disable', false);
+      this.disable = false;
     } else {
-      this.buttonActiv.nativeElement.setAttribute('disable', true);
+      this.disable = true;
     }
   }
 
@@ -215,7 +216,10 @@ export class ContactComponent {
           error: (error) => {
             console.error(error);
           },
-          complete: () => console.info('send post complete'),
+          complete: () => {
+            this.disable = true;
+            setTimeout(() => this.disable = false, 30000);
+          },
         });
     } else if (ngForm.submitted && this.checkBoxCheck.nativeElement.checked && ngForm.form.valid && this.mailTest) {
       this.sendingMessage();
@@ -239,6 +243,6 @@ export class ContactComponent {
     this.checkBoxCheck.nativeElement.checked = false;
     this.accept.nativeElement.setAttribute('style', 'display:none');
     this.send.nativeElement.setAttribute('style', 'display:flex');
-    setTimeout(() => this.send.nativeElement.setAttribute('style', 'display:none'), 2000);
+    setTimeout(() => this.send.nativeElement.setAttribute('style', 'display:none'), 5000);
   }
 }

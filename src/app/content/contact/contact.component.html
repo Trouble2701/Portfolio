@@ -39,7 +39,7 @@
                 </span>
             </div>
             <div class="send">
-                <input class="button" type="submit" value="{{hello}} ;)" #buttonActiv>
+                <input [disabled]="disable" [ngClass]="disable ? 'buttonDis' : 'button'" type="submit" value="{{hello}} ;)">
             </div>
         </form>
     </div>

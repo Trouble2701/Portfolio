@@ -38,7 +38,7 @@ export class ReviewsComponent {
   }
 
   timeChange(){
-    this.time == 20 ? this.rightSlide() : this.time += 1;
+    this.time == 15 ? this.rightSlide() : this.time += 1;
   }
 
   dotShow() {
