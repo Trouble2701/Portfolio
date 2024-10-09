@@ -24,9 +24,11 @@ export class ProjectsComponent {
   @ViewChild('thirdImgBG') thirdImgBG: ElementRef | any;
   @ViewChild('info') info: ElementRef | any;
   @ViewChild('siteImg') siteImg: ElementRef | any;
-  @ViewChild('closeWidth')  closeWidth: ElementRef | any;
+  @ViewChild('closeWidth') closeWidth: ElementRef | any;
   @ViewChild('closeHeight') closeHeight: ElementRef | any;
   @ViewChild('siteRigth') siteRigth: ElementRef | any;
+  @ViewChild('siteLeft') siteLeft: ElementRef | any;
+  @ViewChild('showInfo') showInfo: ElementRef | any;
   @Input() siteNr: string = '';
   @Input() siteName: string = '';
   @Input() description: any = '';
@@ -37,30 +39,97 @@ export class ProjectsComponent {
   @Input() nextPage: string = '';
   codes: any[] = [];
   screenWidth: number = 1271;
-  constructor(){
+  constructor() {
     setInterval(() => this.checkWidth(), 100);
   }
 
-  checkWidth(){
-    if(window.innerWidth > window.innerHeight && window.innerWidth > 1300){
-      this.closeWidth.nativeElement.setAttribute('style', 'display:flex');
-      this.closeHeight.nativeElement.setAttribute('style', 'display:none');
-      if(window.innerHeight > 800){
-        this.siteImg.nativeElement.setAttribute('style', 'display: flex; width: 520px; height: unset');
-        this.siteRigth.nativeElement.setAttribute('style', 'height: 555px');
-      }else{
-        this.siteImg.nativeElement.setAttribute('style', 'display: flex; width: unset; height: 280px');
-        this.siteRigth.nativeElement.setAttribute('style', 'height: 100%');
-      }
-    }else if(window.innerWidth < window.innerHeight && window.innerHeight > 935){
-      this.siteImg.nativeElement.setAttribute('style', 'display: flex');
-      this.closeWidth.nativeElement.setAttribute('style', 'display:none');
-      this.closeHeight.nativeElement.setAttribute('style', 'display:flex');
-    }else{
-      this.siteImg.nativeElement.setAttribute('style', 'display: none');
-      this.closeWidth.nativeElement.setAttribute('style', 'display:none');
-      this.closeHeight.nativeElement.setAttribute('style', 'display:flex');
+  checkWidth() {
+    if (window.innerWidth > window.innerHeight) {
+      this.changeCloseTag('flex', 'none');
+      this.highWidthHeight();
+    } else if (window.innerWidth < window.innerHeight) {
+      this.smalWidth();
     }
+  }
+
+  highWidthHeight(){
+    if (window.innerHeight > 800) {
+      this.highWidth();
+    } else if (window.innerHeight < 560) {
+      this.changeAttribute('height: 470px', 'display:flex;height: 100%', 'display: flex; width: unset; height: 216px', 'height: 85%');
+    } else if (window.innerHeight >= 542 && window.innerHeight < 801) {
+      this.changeAttribute('height: 470px', 'display:flex;height: 470px', 'display: flex; width: unset; height: 280px', 'height: 500px');
+    }
+  }
+
+  highWidth(){
+    if (window.innerWidth > 1300 && window.innerHeight > 860) {
+      this.changeAttribute('height: 555px', 'display:flex;height: 555px', 'display: flex; width: 520px; height: unset', 'height: 500px; width: 1095px');
+    } else if (window.innerWidth <= 1300 && window.innerHeight > 860) {
+      this.changeAttribute('height: 470px', 'display:flex;height: 470px', 'display: flex; width: unset; height: 216px', 'height: 80%; width: 470px')
+    } else if (window.innerWidth <= 1300 && window.innerHeight < 861) {
+      this.changeAttribute('height: 470px', 'display:none; height: 470px', 'display: none', 'height: 80%; width: 72%; padding: 20px')
+    } else if (window.innerWidth > 1300 && window.innerHeight < 861) {
+      this.changeAttribute('height: 555px', 'display:flex; height: 555px', 'display: flex; width: unset; height: 280px', 'height: 80%; width: 1095; padding: 20px')
+    }
+  }
+
+  smalWidth(){
+    if (window.innerHeight > 955) {
+      this.highHeight();
+      window.innerHeight > 985 ? this.changeCloseTag('flex', 'none') : this.changeCloseTag('none', 'flex');
+    } else if (window.innerHeight <= 955) {
+      if (window.innerWidth > 700 && window.innerWidth < 990) {
+        this.siteImg.nativeElement.setAttribute('style', 'display: flex; height: 216px');
+        this.showInfo.nativeElement.setAttribute('style', 'width: 470px; padding: 20px');
+      } else if (window.innerWidth < 700 && window.innerWidth > 400) {
+        this.showInfo.nativeElement.setAttribute('style', 'width: 85%; padding: 20px');
+        this.imgSmalHeight();
+      } else if (window.innerWidth < 400) {
+        this.showInfo.nativeElement.setAttribute('style', 'width: 85%; padding: 20px');
+        this.siteImg.nativeElement.setAttribute('style', 'display: flex; height: 190px');
+      }
+      this.siteLeft.nativeElement.setAttribute('style', 'height: 100%');
+      this.siteRigth.nativeElement.setAttribute('style', 'display: none');
+      this.changeCloseTag('none', 'flex');
+    }
+  }
+
+  imgSmalHeight(){
+    if(window.innerWidth > 450){
+      this.siteImg.nativeElement.setAttribute('style', 'display: flex; height: 216px');
+    }else if(window.innerWidth < 450){
+      this.siteImg.nativeElement.setAttribute('style', 'display: flex; height: 190px');
+    }else if(window.innerWidth < 375){
+      this.siteImg.nativeElement.setAttribute('style', 'display: flex; height: 160px');
+    }
+  }
+
+  highHeight(){
+      this.siteLeft.nativeElement.setAttribute('style', 'height: 540px');
+      this.siteRigth.nativeElement.setAttribute('style', 'display: flex');
+      if (window.innerHeight > 990 && window.innerWidth > 700 && window.innerWidth < 990) {
+        this.siteImg.nativeElement.setAttribute('style', 'display: flex; height: 216px');
+        this.showInfo.nativeElement.setAttribute('style', 'width: 470px; padding: 20px');
+      } else if (window.innerHeight > 990 && window.innerWidth < 700 && window.innerWidth > 400) {
+        this.showInfo.nativeElement.setAttribute('style', 'width: 85%; padding: 20px');
+        this.imgSmalHeight();
+      } else if (window.innerHeight < 990 && window.innerWidth < 400) {
+        this.showInfo.nativeElement.setAttribute('style', 'width: 85%; padding: 20px');
+        this.siteImg.nativeElement.setAttribute('style', 'display: flex; height: 190px');
+      }
+  }
+
+  changeAttribute(left: string, right: string, img: string, info: string) {
+    this.siteLeft.nativeElement.setAttribute('style', left);
+    this.siteRigth.nativeElement.setAttribute('style', right);
+    this.siteImg.nativeElement.setAttribute('style', img);
+    this.showInfo.nativeElement.setAttribute('style', info);
+  }
+
+  changeCloseTag(closeW: string, closeH: string) {
+    this.closeWidth.nativeElement.setAttribute('style', 'display:', closeW);
+    this.closeHeight.nativeElement.setAttribute('style', 'display:', closeH);
   }
 
   changeStyleImg(data: string) {
@@ -69,7 +138,7 @@ export class ProjectsComponent {
     }
   }
 
-  changeIMG(data:string) {
+  changeIMG(data: string) {
     this.first.nativeElement.setAttribute('style', data == 'first' ? 'display: flex' : 'display: none');
     this.firstImg.nativeElement.setAttribute('style', data == 'first' ? 'display: flex' : 'display: none');
     this.firstImgBG.nativeElement.setAttribute('style', data == 'first' ? 'display: flex' : 'display: none');
@@ -87,7 +156,7 @@ export class ProjectsComponent {
     }
   }
 
-  changeBackIMG(){
+  changeBackIMG() {
     this.first.nativeElement.setAttribute('style', 'display: none');
     this.firstImg.nativeElement.setAttribute('style', 'display: none');
     this.firstImgBG.nativeElement.setAttribute('style', 'display: none');

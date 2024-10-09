@@ -25,8 +25,8 @@ switch ($_SERVER['REQUEST_METHOD']) {
             $datum = date(DateTime::RFC2822);    
             $headers   = array();
             $headers[] = "Date: {$datum}";
-            $headers[] = "From: contact@sven-plankenbichler.de";
-            $headers[] = "Sender: contact@sven-plankenbichler.de";
+            $headers[] = "From: info@sven-plankenbichler.de";
+            $headers[] = "Sender: info@sven-plankenbichler.de";
             $headers[] = "To: {$recipient}";
             $headers[] = "MIME-Version: 1.0";
             $headers[] = "Content-type: text/plain; charset=utf-8";
@@ -37,5 +37,4 @@ switch ($_SERVER['REQUEST_METHOD']) {
         default: //Reject any non POST or OPTIONS requests.
             header("Allow: POST", true, 405);
             exit;
-    } 
-?>
+    }

@@ -13,11 +13,22 @@ export class PolicyComponent {
   database = inject(DatabaseComponent)
   @ViewChild('top') top: ElementRef | any;
   @ViewChild('bottom') bottom: ElementRef | any;
+  @ViewChild('ger') ger: ElementRef | any;
+  @ViewChild('en') en: ElementRef | any;
 
   intervalID: any;
   translateX: number = 0;
   direction: number = 1;
   fadeStart: number = 0;
+
+  constructor(){
+    setInterval(() => this.setLangPrivatePolicy(), 100);
+  }
+
+  setLangPrivatePolicy(){
+    this.ger.nativeElement.setAttribute('style', this.database.toLang == 0 ? 'display:flex' : 'display: none');
+    this.en.nativeElement.setAttribute('style', this.database.toLang == 1 ? 'display:flex' : 'display: none');
+  }
 
   animationOn(data: string, type:string) {
     this.fadeStart = data == 'start' ? 1 : 0;

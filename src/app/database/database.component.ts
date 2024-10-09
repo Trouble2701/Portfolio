@@ -10,7 +10,7 @@ export class DatabaseComponent {
   datas =
     [
       {
-        myInfo: ['Frontend Entwickler', 'Wohne in Dresden', 'Remote Arbeiten'],
+        myInfo: ['Frontend Entwickler', 'Weiterbildung Backend', 'Wohne in Dresden', 'Remote Arbeiten', 'Suche Herausforderung', 'Offen für neue Technologien'],
         navBar: ['Über mich', 'Skills', 'Projekte'],
         legalNotice: 'Impressum',
         frontend: 'Frontend Entwickler',
@@ -47,15 +47,16 @@ export class DatabaseComponent {
         whoIam: [
           'Wer bin ich',
           'Über mich',
-          'Hallo, ich bin ein deutschsprachiger Frontend-Entwickler mit Sitz in Dresden. Motiviert durch die grenzenlosen Möglichkeiten innerhalb der IT, freue ich mich darauf, visuell fesselnde und intuitive Websites und Anwendungen zu erstellen.',
-          'Flexibel in Bezug auf die Arbeitsumgebung kann ich sowohl vor Ort in Dresden als auch remote effektiv arbeiten.',
+          'Hallo, mein Name ist Sven und bin',
+          ' Jahre alt. Ich bin ein Frontend-Entwickler mit Sitz in Dresden. Motiviert durch die grenzenlosen Möglichkeiten innerhalb der IT, freue ich mich darauf, visuell fesselnde und intuitive Websites und Anwendungen zu erstellen.',
+          'Ich bin Flexibel in Bezug auf die Arbeitsumgebung und kann sowohl vor Ort in Dresden als auch remote effektiv arbeiten.',
           'Ich bin aufgeschlossen und immer auf der Suche nach persönlichen Herausforderungen, um mein Wissen und meine Fähigkeiten stetig zu verbessern.',
-          "In meinem Beruf geht es beim Programmieren nicht nur darum, Code zu schreiben; Es ist eine kreative Form der Problemlösung. Ich bin stolz auf meine Fähigkeit, komplexe technische Herausforderungen in einfache, benutzerfreundliche Lösungen umzuwandeln. So helfe ich Ihnen, Ihre Ziele zu erreichen und Ihre Visionen zum Leben zu erwecken.",
+          "In meinem Beruf geht es beim Programmieren nicht nur darum, Code zu schreiben, es ist eine kreative Form der Problemlösung. Ich bin stolz auf meine Fähigkeit, komplexe technische Herausforderungen in einfache, benutzerfreundliche Lösungen umzuwandeln. So helfe ich Ihnen, Ihre Ziele zu erreichen und Ihre Visionen zum Leben zu erwecken.",
         ],
         technologies: [
           'Technologien',
           'Fähigkeiten',
-          'Meine Reise umfasste die Arbeit an verschiedenen Projekten und den Einsatz verschiedener Frontend-Technologien und -Konzepte. Ich bin offen für den Einsatz neuer Technologien und Methoden, um meine Fähigkeiten kontinuierlich zu verbessern und in der sich ständig weiterentwickelnden Landschaft der Webentwicklung an der Spitze zu bleiben.',
+          'Meine Reise bei der Developer Akademie umfasste die Arbeit an verschiedenen Projekten und den Einsatz verschiedener Frontend-Technologien und -Konzepte. Ich bin offen für den Einsatz neuer Technologien und Methoden, um meine Fähigkeiten kontinuierlich zu verbessern und in der sich ständig weiterentwickelnden Landschaft der Webentwicklung an der Spitze zu bleiben. ',
           'Sie brauchen eine',
           'andere Fähigkeit?',
           'Kontaktieren Sie mich gerne. Ich freue mich darauf, mein bisheriges Wissen zu erweitern.',
@@ -69,7 +70,7 @@ export class DatabaseComponent {
         ],
       },
       {
-        myInfo: ['Frontend Developer', 'Based in Dresden', 'Available for remote work'],
+        myInfo: ['Frontend Developer', 'Backend training', 'Based in Dresden', 'Available for remote work', 'Search Challenge', 'Open to new Technologies'],
         navBar: ['About me', 'Skills', 'Projects'],
         legalNotice: 'Legal Notice',
         frontend: 'Frontend Developer',
@@ -106,15 +107,16 @@ export class DatabaseComponent {
         whoIam: [
           'Who I Am',
           'About Me',
-          'Hi, I’m a german speaking Frontend Developer based in Dresden. Motivated by the limitless opportunities within IT, I am excited about crafting visually captivating and intuitive websites and applications.',
-          'Flexible in terms of working environments, I can work effectively both on-site in Dresden and remotely.',
+          'Hi, Hello, my name is Sven and I am',
+          ' years old. I am a frontend developer based in Dresden. Motivated by the limitless possibilities within IT, I look forward to creating visually captivating and intuitive websites and applications.',
+          'I am flexible in terms of work environment and can work effectively both on-site in Dresden and remotely.',
           'I am open-minded and always looking for personal challenges to constantly improve my knowledge and skills.',
-          "In my profession, programming isn't just about writing code; it's a creative form of problem-solving. I take pride in my ability to distill complex technical challenges into simple, user-friendly solutions. This way, I help you achieve your goals and bring your visions to life."
+          "In my profession, programming isn't just about writing code, it's a creative form of problem-solving. I take pride in my ability to distill complex technical challenges into simple, user-friendly solutions. This way, I help you achieve your goals and bring your visions to life."
         ],
         technologies: [
           'Technologies',
           'Skill Set',
-          'My journey has involved working on diverse projects, employing a range of frontend technologies and concepts. I am open to embracing new technologies and methodologies to Continously enhance my skills and stay ahead in the ever-evolving landscape of web development.',
+          'My journey at Developer Academy has included working on various projects and using various frontend technologies and concepts. I am open to using new technologies and methodologies to continuously improve my skills and stay at the forefront in the ever-evolving landscape of web development.',
           'You need',
           'another skill?',
           'Feel free to contact me. I look forward to expanding on my previous knowledge.',

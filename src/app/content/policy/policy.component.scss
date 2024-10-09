@@ -15,6 +15,12 @@ div{
         color: #FFFFFF;
         font-family: 'Fira Code';
 
+        .ds{
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            flex-direction: column;
+        }
         .back{
             text-decoration: none;
             width: 100px;

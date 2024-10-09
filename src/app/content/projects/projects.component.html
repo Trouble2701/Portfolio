@@ -28,8 +28,8 @@
     </div>
 </div>
 <div class="showSiteInfoBackground" #info (click)="closeInfo()">
-    <div class="showSiteInfo" (click)="onEvent($event)">
-        <div class="siteLeft">
+    <div class="showSiteInfo" (click)="onEvent($event)" #showInfo>
+        <div class="siteLeft" #siteLeft>
             <span class="number">{{siteNr}}</span>
             <span class="titleInfo">{{siteName}}</span>
             <span class="questionInfo">{{database.projectsQuest}}</span>
