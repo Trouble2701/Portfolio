@@ -1,61 +1,63 @@
-<div id="projects">
-    <div class="leftSection">
-        <span class="portfolio">Portfolio</span>
-        <h1>{{database.projects}}</h1>
-        <span class="description">{{database.projectsDes}}</span>
-        <div class="sites">
-            <section (click)="openInfo('first')" (mouseenter)="changeStyleImg('first')" (mouseleave)="changeStyleImgBack()">
-                <span class="title">{{database.sites[0].name[0]}} <img class="first" src="assets/img/icons/arrow_outward.png" #first></span>
-                <span class="code">Angular <p>|</p> TypeScript <p>|</p> HTML <p>|</p> CSS <p>|</p> Firebase</span>
-            </section>
-            <section (click)="openInfo('second')" (mouseenter)="changeStyleImg('second')" (mouseleave)="changeStyleImgBack()">
-                <span class="title">{{database.sites[0].name[1]}} <img class="second" src="assets/img/icons/arrow_outward.png" #second></span>
-                <span class="code">HTML <p>|</p> CSS <p>|</p> JavaScript</span>
-            </section>
-            <section (click)="openInfo('third')" (mouseenter)="changeStyleImg('third')" (mouseleave)="changeStyleImgBack()">
-                <span class="title">{{database.sites[0].name[2]}} <img class="third" src="assets/img/icons/arrow_outward.png" #third></span>
-                <span class="code">HTML <p>|</p> CSS <p>|</p> JavaScript</span>
-            </section>
+<section>
+    <div id="projects">
+        <div class="leftSection">
+            <span class="portfolio">Portfolio</span>
+            <h1>{{database.projects}}</h1>
+            <span class="description">{{database.projectsDes}}</span>
+            <div class="sites">
+                <section (click)="openInfo('first')" (mouseenter)="changeStyleImg('first')" (mouseleave)="changeStyleImgBack()">
+                    <span class="title">{{database.sites[0].name[0]}} <img class="first" src="assets/img/icons/arrow_outward.png" #first></span>
+                    <span class="code">Angular <p>|</p> TypeScript <p>|</p> HTML <p>|</p> CSS <p>|</p> Firebase</span>
+                </section>
+                <section (click)="openInfo('second')" (mouseenter)="changeStyleImg('second')" (mouseleave)="changeStyleImgBack()">
+                    <span class="title">{{database.sites[0].name[1]}} <img class="second" src="assets/img/icons/arrow_outward.png" #second></span>
+                    <span class="code">HTML <p>|</p> CSS <p>|</p> JavaScript</span>
+                </section>
+                <section (click)="openInfo('third')" (mouseenter)="changeStyleImg('third')" (mouseleave)="changeStyleImgBack()">
+                    <span class="title">{{database.sites[0].name[2]}} <img class="third" src="assets/img/icons/arrow_outward.png" #third></span>
+                    <span class="code">HTML <p>|</p> CSS <p>|</p> JavaScript</span>
+                </section>
+            </div>
+        </div>
+        <div class="rightSection">
+            <img class="firstImg" ngSrc="assets/img/sites/join.png" width="295" height="192" #firstImg>
+            <img class="firstImgBG" src="assets/img/sites/sitesCapa.png" #firstImgBG>
+            <img class="secondImg" ngSrc="assets/img/sites/elpollo.png" width="295" height="192" #secondImg>
+            <img class="secondImgBG" src="assets/img/sites/sitesCapa.png" #secondImgBG>
+            <img class="thirdImg" ngSrc="assets/img/sites/pokedex.png" width="295" height="192" #thirdImg>
+            <img class="thirdImgBG" src="assets/img/sites/sitesCapa.png" #thirdImgBG>
         </div>
     </div>
-    <div class="rightSection">
-        <img class="firstImg" ngSrc="assets/img/sites/join.png" width="295" height="192" #firstImg>
-        <img class="firstImgBG" src="assets/img/sites/sitesCapa.png" #firstImgBG>
-        <img class="secondImg" ngSrc="assets/img/sites/elpollo.png" width="295" height="192" #secondImg>
-        <img class="secondImgBG" src="assets/img/sites/sitesCapa.png" #secondImgBG>
-        <img class="thirdImg" ngSrc="assets/img/sites/pokedex.png" width="295" height="192" #thirdImg>
-        <img class="thirdImgBG" src="assets/img/sites/sitesCapa.png" #thirdImgBG>
-    </div>
-</div>
-<div class="showSiteInfoBackground" #info (click)="closeInfo()">
-    <div class="showSiteInfo" (click)="onEvent($event)" #showInfo>
-        <div class="siteLeft" #siteLeft>
-            <span class="number">{{siteNr}}</span>
-            <span class="titleInfo">{{siteName}}</span>
-            <span class="questionInfo">{{database.projectsQuest}}</span>
-            <span class="descriptionInfo">{{description}}</span>
-            <div class="codeInfo">
-                @for(codearts of codes; track codearts; let i = $index){
-                    @if(this.database.codearts[codearts]){
-                        <div class="codeShow">
-                            <img src="assets/img/icons/{{this.database.codearts[codearts].toLowerCase().replace(' ', '')}}green.png">
-                            <span class="codeName">{{this.database.codearts[codearts]}}</span>
-                        </div>
+    <div class="showSiteInfoBackground" #info (click)="closeInfo()">
+        <div class="showSiteInfo" (click)="onEvent($event)" #showInfo>
+            <div class="siteLeft" #siteLeft>
+                <span class="number">{{siteNr}}</span>
+                <span class="titleInfo">{{siteName}}</span>
+                <span class="questionInfo">{{database.projectsQuest}}</span>
+                <span class="descriptionInfo">{{description}}</span>
+                <div class="codeInfo">
+                    @for(codearts of codes; track codearts; let i = $index){
+                        @if(this.database.codearts[codearts]){
+                            <div class="codeShow">
+                                <img src="assets/img/icons/{{this.database.codearts[codearts].toLowerCase().replace(' ', '')}}green.png">
+                                <span class="codeName">{{this.database.codearts[codearts]}}</span>
+                            </div>
+                        }
                     }
-                }
+                </div>
+                <div class="siteLinks">
+                    <a href="{{siteLinksGit}}" target="_blank">Github<img src="assets/img/icons/arrow_outwardgreen.png"></a><a href="{{siteLinksTest}}" target="_blank">Live Test<img src="assets/img/icons/arrow_outwardgreen.png"></a>
+                </div>
+                <div class="smalHight">
+                    <div class="closedIconSmalHeight" (click)="closeInfo()" #closeHeight><img class="closeSmall" src="assets/img/icons/close_small.png" ><img class="close" src="assets/img/icons/close.png"></div>
+                    <div class="nextProjectMobile" (click)="openInfo(nextPage)"><span>Next Project</span><img src="assets/img/icons/arrows.png"></div>
+                </div>
             </div>
-            <div class="siteLinks">
-                <a href="{{siteLinksGit}}" target="_blank">Github<img src="assets/img/icons/arrow_outwardgreen.png"></a><a href="{{siteLinksTest}}" target="_blank">Live Test<img src="assets/img/icons/arrow_outwardgreen.png"></a>
+            <div class="siteRight" #siteRigth>
+                <div class="closedIcon" (click)="closeInfo()" #closeWidth><img class="closeSmall" src="assets/img/icons/close_small.png"><img class="close" src="assets/img/icons/close.png"></div>
+                <img ngSrc="assets/img/sites/{{img}}" width="520" height="320" #siteImg>
+                <div class="nextProject" (click)="openInfo(nextPage)"><span>Next Project</span><img src="assets/img/icons/arrows.png"></div>
             </div>
-            <div class="smalHight">
-                <div class="closedIconSmalHeight" (click)="closeInfo()" #closeHeight><img class="closeSmall" src="assets/img/icons/close_small.png" ><img class="close" src="assets/img/icons/close.png"></div>
-                <div class="nextProjectMobile" (click)="openInfo(nextPage)"><span>Next Project</span><img src="assets/img/icons/arrows.png"></div>
-            </div>
-        </div>
-        <div class="siteRight" #siteRigth>
-            <div class="closedIcon" (click)="closeInfo()" #closeWidth><img class="closeSmall" src="assets/img/icons/close_small.png"><img class="close" src="assets/img/icons/close.png"></div>
-            <img ngSrc="assets/img/sites/{{img}}" width="520" height="320" #siteImg>
-            <div class="nextProject" (click)="openInfo(nextPage)"><span>Next Project</span><img src="assets/img/icons/arrows.png"></div>
         </div>
     </div>
-</div>
+</section>

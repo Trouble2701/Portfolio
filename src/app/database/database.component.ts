@@ -36,14 +36,14 @@ export class DatabaseComponent {
           'Datenschutzerklärung',
           'gelesen und stimme der darin beschriebenen Verarbeitung meiner Daten zu.',
           'Sagen Sie Hallo',
-          'Nachricht wurde gesendet :-) In 30 Sekunden kann die nächste Nachricht gesendet werden',
+          'Nachricht wurde gesendet :-)',
         ],
         projects: 'Ausgewählte Projekte',
         projectsDes: 'Entdecken Sie hier eine Auswahl meiner Arbeiten – interagieren Sie mit Projekte, um meine Fähigkeiten in Aktion zu sehen',
         projectsQuest: 'Worum geht es in diesem Projekt?',
         projectsInfoFirst: 'Vom Kanban-System inspirierter Aufgabenmanager. Erstellen und organisieren Sie Aufgaben mithilfe von Drag-and-Drop-Funktionen, weisen Sie Benutzer und Kategorien zu.',
         projectsInfoSecond: 'Spring-, Lauf- und Wurfspiel basierend auf einem objektorientierten Ansatz. Hilf Pepe, Münzen und Tabasco-Salsa zu finden, um gegen die verrückte Henne zu kämpfen.',
-        projectsInfoThird: 'Der Pokedex liefert Informationen zu den jeweiligen Pokenmon. Derzeit werden maximal 217 Pokemon geladen um die Ladezeit zu minimieren.',
+        projectsInfoThird: 'Der Pokédex liefert Informationen zu den jeweiligen Pokenmon. Derzeit werden maximal 217 Pokemon geladen um die Ladezeit zu minimieren.',
         whoIam: [
           'Wer bin ich',
           'Über mich',
@@ -96,14 +96,14 @@ export class DatabaseComponent {
           'Privacy Policy',
           'and agree to the processing of my data as outlined.',
           'Say Hello',
-          'Message has been sent :-) The next message can be sent in 30 seconds',
+          'Message has been sent :-)',
         ],
         projects: 'Featured Projects',
         projectsDes: 'Explore a selection of my work here - interact with projects to see my skills in action',
         projectsQuest: 'What is this project about?',
         projectsInfoFirst: 'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
         projectsInfoSecond: 'Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.',
-        projectsInfoThird: 'The Pokedex provides information about the respective Pokemon. Currently, a maximum of 217 Pokemon are loaded to minimize loading time.',
+        projectsInfoThird: 'The Pokédex provides information about the respective Pokemon. Currently, a maximum of 217 Pokemon are loaded to minimize loading time.',
         whoIam: [
           'Who I Am',
           'About Me',
@@ -132,7 +132,7 @@ export class DatabaseComponent {
     ];
 
 codearts = ['CSS', 'HTML', 'Firebase', 'Angular', 'TypeScript', 'JavaScript'];
-languarge = 'DE';
+languarge:string | null = '';
 toLang = 0;
 myInfo = this.datas[this.toLang].myInfo;
 navBar = this.datas[this.toLang].navBar;
@@ -152,7 +152,7 @@ reviews = this.datas[this.toLang].reviews;
 
 sites = [
   {
-    name: ['Join', 'El Pollo Loco', 'PokeDex'],
+    name: ['Join', 'El Pollo Loco', 'Pokédex'],
     img: ['join.png', 'elpollo.png', 'pokedex.png'],
     description:
       [this.projectsInfoFirst,

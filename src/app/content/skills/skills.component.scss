@@ -1,14 +1,19 @@
 section {
-    margin-top: 144px;
-    height: 695px;
+
+    max-width: 1440px;
+    width: 96vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     div {
-        width: 1248px;
-        height: 100%;
+        max-width: 1248px;
+        width: 100%;
+        height: fit-content;
         display: flex;
         justify-content: space-between;
         align-items: flex-start;
-        gap: 90px;
+        gap: 60px;
 
         .skillText {
             display: flex;
@@ -16,7 +21,8 @@ section {
             align-items: flex-start;
             flex-direction: column;
             gap: 20px;
-            width: 520px;
+            max-width: 568px;
+            width: 96%;
 
             >span {
                 font-family: 'Karla';
@@ -32,7 +38,7 @@ section {
                 align-items: flex-start;
                 flex-direction: column;
                 gap: 40px;
-                width: calc(520px - 64px);
+                width: fit-content;
                 height: 80%;
                 border: 1px solid #3DCFB6;
                 background-color: #3DCFB61A;
@@ -40,8 +46,6 @@ section {
                 padding: 32px;
 
                 .head {
-                    width: 100%;
-                    height: unset;
                     font-family: 'Fira Code';
                     font-weight: 700;
                     font-size: 64px;
@@ -50,8 +54,6 @@ section {
                 }
 
                 .descript {
-                    width: 100%;
-                    height: unset;
                     font-family: 'Karla';
                     font-weight: 400;
                     font-size: 18px;
@@ -61,8 +63,6 @@ section {
                 }
 
                 .need {
-                    width: 100%;
-                    height: unset;
                     font-family: 'Fira Code';
                     font-weight: 700;
                     font-size: 20px;
@@ -81,9 +81,7 @@ section {
                     }
                 }
 
-                .info{
-                    width: 100%;
-                    height: unset; 
+                .info{ 
                     font-family: 'Karla';
                     font-weight: 400;
                     font-size: 16px;
@@ -124,18 +122,19 @@ section {
             align-items: flex-start;
             flex-wrap: wrap;
             gap: 72px;
-            width: 632px;
-            height: 428px;
+            max-width: 568px;
+            width: 100%;
+            height: fit-content;
             position: relative;
             top: 48px;
 
             .oneOfSkill {
-                width: 104px;
-                height: 116px;
                 display: flex;
                 justify-content: flex-start;
                 align-items: center;
                 flex-direction: column;
+                width: 64px;
+                height: fit-content;
                 gap: 8px;
 
                 >img {
@@ -161,29 +160,11 @@ section {
     }
 }
 
-@media (max-width: 1300px){
-    section{
-        >div{
-            width: 95vw;
-            .allSkills{
-                width: 470px;
-            }
-        }
-    }
-}
-
 @media (max-width: 1140px){
     section{
         >div{
-            width: 95vw;
-            .allSkills{
-                width: 470px;
-            }
-
             .skillText{
-                width: 420px;
                 .skillBox{
-                    width: 356px;
     
                     .head{
                         font-size: 55px;
@@ -192,10 +173,12 @@ section {
     
                     .descript{
                         font-size: 16px;
+                        line-height: 19.2px;
                     }
     
                     .need{
                         font-size: 16px;
+                        line-height: 19.2px;
                     }
                 }
             }
@@ -206,29 +189,17 @@ section {
 @media (max-width: 1020px){
     section{
         >div{
-            .allSkills{
-                width: 420px;
-                gap: 28px;
-            }
-
             .skillText{
-                width: 320px;
-                .skillBox{
-                    width: 256px;
-    
+               
+                .skillBox{    
                     .head{
                         font-size: 35px;
                         line-height: 35px;
                     }
     
-                    .descript{
-                        font-size: 16px;
-                    }
-    
                     .need{
-                        flex-direction: column;
-                        gap: 0;
-                        font-size: 16px;
+                        flex-wrap: wrap;
+                        gap: 10px;
                     }
                 }
             }
@@ -238,50 +209,18 @@ section {
 
 @media (max-width: 820px){
     section{
-        margin-top: 235px;
-        display: flex;
-        justify-content: center;
-        height: 1170px;
-
         >div{
-            height: 80%;
             align-items: center;
             flex-direction: column;
-            gap: 0;
 
             .skillText{
-                width: 90%;
-                height: unset;
                 align-items: center;
-
-                .skillBox{
-                    width: 394px;
-                }
             }
-        }
-    }
-}
 
-@media (max-width: 520px){
-    section{
-        display: flex;
-        justify-content: center;
-        height: 1170px;
-
-        >div{
-            height: 80%;
-            align-items: center;
-            flex-direction: column;
-            gap: 0;
-
-            .skillText{
-                width: 90%;
-                height: unset;
+            .allSkills{
+                position: unset;
                 align-items: center;
-
-                .skillBox{
-                    width: 90%;
-                }
+                justify-content: center;
             }
         }
     }
@@ -289,24 +228,10 @@ section {
 
 @media (max-width: 435px) {
     section {
-        margin-top: 165px;
-
         >div{
-            .skillText{
-                .skillBox{
-                    width: 82%;
-                    height: 85%;
-                }
-            }
-
             .allSkills{
-                width: 100%;
-                justify-content: center;
-                gap: 16px;
-
+                gap: 30px;
                 .oneOfSkill{
-                    width: 90px;
-
                     >img{
                         width: 60px;
                         height: 60px;
@@ -319,17 +244,5 @@ section {
                 }
             }
         }
-    }
-}
-
-@media (max-width: 390px){
-    section {
-        margin-top: 110px;
-    }
-}
-
-@media (max-width: 360px){
-    section {
-        margin-top: 50px;
     }
 }

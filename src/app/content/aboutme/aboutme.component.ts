@@ -15,14 +15,6 @@ export class AboutmeComponent {
   }
   database = inject(DatabaseComponent);
   myAge:Number = 0;
-  @ViewChild('ImgBG') ImgBG: ElementRef | any;
-  changeStyleImg(){
-    this.ImgBG.nativeElement.setAttribute('style', 'display: flex');
-  }
-
-  changeStyleImgBack(){
-    this.ImgBG.nativeElement.setAttribute('style', 'display: none');
-  }
 
   calcAge(){
     var today = new Date();

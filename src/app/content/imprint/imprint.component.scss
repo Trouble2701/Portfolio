@@ -4,7 +4,7 @@ div {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 5px;
+    padding: 30px;
 
     .impressum {
         width: 1248px;
@@ -33,6 +33,7 @@ div {
             align-items: flex-start;
             flex-direction: column;
             margin-top: 0;
+            padding: 0;
 
             >span {
                 font-family: 'Fira Code';
@@ -82,6 +83,16 @@ div {
     &:hover {
         color: #3DCFB6;
     }
+}
+
+.navi{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100px;
+    background-image: linear-gradient(55deg, #1C1C1C 40%, #08463B);
+    margin: 0;
 }
 
 @media (max-width: 1300px){

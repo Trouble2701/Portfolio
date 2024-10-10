@@ -1,46 +1,48 @@
-<div id="contactme">
-    <div class="contactInfo">
-        <span>{{contactMe}}</span>
-        <h1>{{working}}</h1>
-        <span class="problem">{{problem}}</span>
-        <span class="white">{{contactThrougth}}</span>
-        <span class="white">{{developer}} <p>{{talk}}</p></span>
+<section>
+    <div id="contactme">
+        <div class="contactInfo">
+            <span>{{contactMe}}</span>
+            <h1>{{working}}</h1>
+            <span class="problem">{{problem}}</span>
+            <span class="white">{{contactThrougth}}</span>
+            <span class="white">{{developer}} <p>{{talk}}</p></span>
+        </div>
+        <div class="contactForm">
+    
+            <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
+                <div class="input">
+                    <span>{{whatsName}}</span>
+                    <input type="text" class="contactInput"
+                    (input)="ValidateName(contactData.name)"    
+                    [(ngModel)]="contactData.name" [placeholder]="pname" name="name" #nameType required>
+                </div>
+                <div class="input">
+                    <span>{{whatsEmail}}</span>
+                    <input type="text" class="contactInput" name="email"
+                    (input)="ValidateEmail(contactData.email)"
+                        [(ngModel)]="contactData.email" [placeholder]="pemail"
+                        pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}" #email required>
+                </div>
+                <div class="input">
+                    <span>{{whatsHelp}}</span>
+                    <input type="text" minlength="4" class="contactInput"
+                    (input)="ValidateMessage(contactData.message)"    
+                        name="massage" [(ngModel)]="contactData.message" [placeholder]="phelp" #messageType required>
+                </div>
+                <div class="input noneBorder">
+                    <label class="container">
+                        <input type="checkbox" [(ngModel)]="checkBox" #checkBoxCheck>
+                        <span class="checkmark"></span>
+                    </label>
+                    <span class="policy">{{ppFirst}} <a href="/policy">{{ppSecond}}</a> {{ppThird}}
+                        <p class="no" #accept>{{acceptFailed}}</p>
+                        <p class="yes" #send>{{mailIsSending}}</p>
+                    </span>
+                </div>
+                <div class="send">
+                    <input [disabled]="disable" [ngClass]="disable ? 'buttonDis' : 'button'" type="submit" value="{{hello}} ;)">
+                </div>
+            </form>
+        </div>
     </div>
-    <div class="contactForm">
-
-        <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
-            <div class="input">
-                <span>{{whatsName}}</span>
-                <input type="text" class="contactInput"
-                (input)="ValidateName(contactData.name)"    
-                [(ngModel)]="contactData.name" [placeholder]="pname" name="name" #nameType required>
-            </div>
-            <div class="input">
-                <span>{{whatsEmail}}</span>
-                <input type="text" class="contactInput" name="email"
-                (input)="ValidateEmail(contactData.email)"
-                    [(ngModel)]="contactData.email" [placeholder]="pemail"
-                    pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}" #email required>
-            </div>
-            <div class="input">
-                <span>{{whatsHelp}}</span>
-                <input type="text" minlength="4" class="contactInput"
-                (input)="ValidateMessage(contactData.message)"    
-                    name="massage" [(ngModel)]="contactData.message" [placeholder]="phelp" #messageType required>
-            </div>
-            <div class="input noneBorder">
-                <label class="container">
-                    <input type="checkbox" [(ngModel)]="checkBox" #checkBoxCheck>
-                    <span class="checkmark"></span>
-                </label>
-                <span class="policy">{{ppFirst}} <a href="/policy">{{ppSecond}}</a> {{ppThird}}
-                    <p class="no" #accept>{{acceptFailed}}</p>
-                    <p class="yes" #send>{{mailIsSending}}</p>
-                </span>
-            </div>
-            <div class="send">
-                <input [disabled]="disable" [ngClass]="disable ? 'buttonDis' : 'button'" type="submit" value="{{hello}} ;)">
-            </div>
-        </form>
-    </div>
-</div>
+</section>

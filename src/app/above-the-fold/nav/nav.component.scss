@@ -6,7 +6,8 @@ nav {
     align-items: center;
     position: absolute;
     top: 48px;
-    left: 96px;
+    left: 50%;
+    transform: translateX(-50%);
     color: #D9D9D9;
     z-index: 1;
 
@@ -124,7 +125,8 @@ nav {
     justify-content: space-between;
     align-items: center;
     width: 85vw;
-    left: 30px;
+    left: 50%;
+    transform: translateX(-50%);
     z-index: 6;
 
     .logoMobile{

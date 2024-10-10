@@ -56,6 +56,7 @@ footer {
             font-weight: 400;
             font-size: 18px;
             line-height: 21.6px;
+            text-align: center;
         }
 
         .footerRightLinks {
@@ -112,13 +113,14 @@ footer {
         font-weight: 400;
         font-size: 18px;
         line-height: 21.6px;
+        text-align: center;
     }
 }
 
 @media (max-width: 1300px){
     footer{
         >div{
-            width: 95vw;
+            width: 85vw;
         }
     }   
 }
@@ -141,7 +143,7 @@ footer {
     }   
 }
 
-@media (max-width: 370px){
+@media (max-width: 400px){
     footer{
         >div{
             .footerName{

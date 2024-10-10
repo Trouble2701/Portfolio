@@ -1,10 +1,11 @@
 import { Component, ElementRef, ViewChild, inject } from '@angular/core';
 import { DatabaseComponent } from '../../database/database.component';
+import { NavComponent } from '../../above-the-fold/nav/nav.component';
 
 @Component({
   selector: 'app-policy',
   standalone: true,
-  imports: [],
+  imports: [NavComponent],
   templateUrl: './policy.component.html',
   styleUrl: './policy.component.scss'
 })

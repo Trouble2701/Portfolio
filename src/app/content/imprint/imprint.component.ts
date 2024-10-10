@@ -1,10 +1,11 @@
 import { Component, ElementRef, inject, ViewChild } from '@angular/core';
 import { DatabaseComponent } from '../../database/database.component';
+import { NavComponent } from '../../above-the-fold/nav/nav.component';
 
 @Component({
   selector: 'app-imprint',
   standalone: true,
-  imports: [],
+  imports: [NavComponent],
   templateUrl: './imprint.component.html',
   styleUrl: './imprint.component.scss'
 })

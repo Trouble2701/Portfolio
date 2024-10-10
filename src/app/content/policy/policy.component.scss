@@ -1,10 +1,10 @@
 div{
-    width: 100%;
+    width: 90vw;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 50px;
-    padding: 5px;
+    padding: 30px;
 
     .policy{
         width: 1248px;
@@ -20,6 +20,7 @@ div{
             justify-content: flex-start;
             align-items: flex-start;
             flex-direction: column;
+            padding: 0;
         }
         .back{
             text-decoration: none;
@@ -54,4 +55,14 @@ div{
     &:hover{
         color: #3DCFB6;
     }
+}
+
+.navi{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100px;
+    background-image: linear-gradient(55deg, #1C1C1C 40%, #08463B);
+    margin: 0;
 }

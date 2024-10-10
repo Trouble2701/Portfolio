@@ -1,6 +1,7 @@
 import { Component, ElementRef, inject, ViewChild, HostListener } from '@angular/core';
 import { DatabaseComponent } from '../../database/database.component';
 import { NgClass } from '@angular/common';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-nav',
@@ -21,23 +22,25 @@ export class NavComponent {
 
   menuIsOpen: number = 0;
 
-  constructor() {
+  constructor(private router: Router) {
     this.siteLang();
   }
 
   siteLang() {
     setInterval(() => {
-      this.database.languarge == 'DE' ? this.siteLangDE() : this.siteLangEN();
+      localStorage.getItem('lang') == 'DE' ? this.siteLangDE() : this.siteLangEN();
     })
   }
 
   siteLangEN() {
+    localStorage.setItem('lang', 'EN');
     this.database.languarge = 'EN';
     this.background.nativeElement.setAttribute('style', 'left: -1px');
     this.backgroundMobile.nativeElement.setAttribute('style', 'left: -1px');
   }
 
   siteLangDE() {
+    localStorage.setItem('lang', 'DE');
     this.database.languarge = 'DE';
     this.background.nativeElement.setAttribute('style', 'left: 42px');
     this.backgroundMobile.nativeElement.setAttribute('style', 'left: 42px');
@@ -54,7 +57,7 @@ export class NavComponent {
   }
 
   reload() {
-    location.reload();
+    this.router.navigateByUrl('/');
   }
 
   mobileMenu() {

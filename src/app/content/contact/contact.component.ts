@@ -61,8 +61,6 @@ export class ContactComponent {
     email: '',
     message: '',
   }
-
-  mailTest = true;
   
   post = {
     endPoint: 'https://sven-plankenbichler.de/sendmail.php',
@@ -206,24 +204,19 @@ export class ContactComponent {
   }
 
   onSubmit(ngForm: NgForm) {
-    if (ngForm.submitted && ngForm.form.valid && this.checkBoxCheck.nativeElement.checked && !this.mailTest) {
+    if (ngForm.submitted && ngForm.form.valid && this.checkBoxCheck.nativeElement.checked) {
       this.http.post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({
           next: (response) => {
-            this.sendingMessage();
             ngForm.resetForm();
           },
           error: (error) => {
             console.error(error);
           },
           complete: () => {
-            this.disable = true;
-            setTimeout(() => this.disable = false, 30000);
+            this.sendingMessage();
           },
         });
-    } else if (ngForm.submitted && this.checkBoxCheck.nativeElement.checked && ngForm.form.valid && this.mailTest) {
-      this.sendingMessage();
-      ngForm.resetForm();
     } else {
       this.checkData();
     }
@@ -243,6 +236,7 @@ export class ContactComponent {
     this.checkBoxCheck.nativeElement.checked = false;
     this.accept.nativeElement.setAttribute('style', 'display:none');
     this.send.nativeElement.setAttribute('style', 'display:flex');
+    this.disable = true;
     setTimeout(() => this.send.nativeElement.setAttribute('style', 'display:none'), 5000);
   }
 }

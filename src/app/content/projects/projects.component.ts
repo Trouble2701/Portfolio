@@ -52,7 +52,7 @@ export class ProjectsComponent {
     }
   }
 
-  highWidthHeight(){
+  highWidthHeight() {
     if (window.innerHeight > 800) {
       this.highWidth();
     } else if (window.innerHeight < 560) {
@@ -62,62 +62,87 @@ export class ProjectsComponent {
     }
   }
 
-  highWidth(){
+  highWidth() {
     if (window.innerWidth > 1300 && window.innerHeight > 860) {
-      this.changeAttribute('height: 555px', 'display:flex;height: 555px', 'display: flex; width: 520px; height: unset', 'height: 500px; width: 1095px');
+      this.changeAttribute('height: 555px', 'display:flex;height: 555px', 'display: flex; width: unset; height: 300px', 'height: 500px; width: 1095px');
     } else if (window.innerWidth <= 1300 && window.innerHeight > 860) {
       this.changeAttribute('height: 470px', 'display:flex;height: 470px', 'display: flex; width: unset; height: 216px', 'height: 80%; width: 470px')
     } else if (window.innerWidth <= 1300 && window.innerHeight < 861) {
-      this.changeAttribute('height: 470px', 'display:none; height: 470px', 'display: none', 'height: 80%; width: 72%; padding: 20px')
+      this.changeAttribute('height: 470px', 'display:flex; height: 470px', 'display: flex; position: absolute; right: 20px; top: 20px', 'height: 80%; width: 72%; padding: 20px')
     } else if (window.innerWidth > 1300 && window.innerHeight < 861) {
       this.changeAttribute('height: 555px', 'display:flex; height: 555px', 'display: flex; width: unset; height: 216px', 'height: 80%; width: 1095; padding: 20px')
     }
   }
 
-  smalWidth(){
+  smalWidth() {
     if (window.innerHeight > 955) {
       this.highHeight();
       window.innerHeight > 985 ? this.changeCloseTag('flex', 'none') : this.changeCloseTag('none', 'flex');
+      this.showInfo.nativeElement.setAttribute('style', 'width: 85%; padding: 20px');
+      if (window.innerWidth < 480 && window.innerWidth > 409) {
+        this.siteImg.nativeElement.setAttribute('style', 'display: flex; height: 216px; position: absolute; right: 10px; top: 10px');
+      } else if(window.innerWidth < 410){
+        this.siteImg.nativeElement.setAttribute('style', 'display:flex; height: 160px');
+        this.showInfo.nativeElement.setAttribute('style', 'width: 80%; padding: 20px');
+      } else {
+        this.siteImg.nativeElement.setAttribute('style', 'display: flex; height: 300px');
+      }
     } else if (window.innerHeight <= 955) {
       if (window.innerWidth > 700 && window.innerWidth < 990) {
-        this.siteImg.nativeElement.setAttribute('style', 'display: flex; height: 216px');
+        this.siteImg.nativeElement.setAttribute('style', 'display: flex; height: 160px; position: absolute; right: 20px; top: 20px');
         this.showInfo.nativeElement.setAttribute('style', 'width: 470px; padding: 20px');
       } else if (window.innerWidth < 700 && window.innerWidth > 400) {
         this.showInfo.nativeElement.setAttribute('style', 'width: 85%; padding: 20px');
         this.imgSmalHeight();
       } else if (window.innerWidth < 400) {
         this.showInfo.nativeElement.setAttribute('style', 'width: 85%; padding: 20px');
-        this.siteImg.nativeElement.setAttribute('style', 'display: flex; height: 190px');
+        if (window.innerHeight < 700) {
+          if (window.innerWidth < 400) {
+            this.siteImg.nativeElement.setAttribute('style', 'display: flex; height: 100px; position: absolute; right: 10px; top: 10px');
+          } else {
+            this.siteImg.nativeElement.setAttribute('style', 'display: flex; height: 100px; position: absolute; right: 20px; top: 20px');
+          }
+        } else {
+          if (window.innerWidth < 400) {
+            this.siteImg.nativeElement.setAttribute('style', 'display: flex; height: 100px; position: absolute; right: 0; top: 0');
+            this.siteRigth.nativeElement.setAttribute('style', 'display: flex; height: 130px');
+          } else {
+            this.siteImg.nativeElement.setAttribute('style', 'display: flex; height: 190px');
+          }
+        }
       }
-      this.siteLeft.nativeElement.setAttribute('style', 'height: 100%');
-      this.siteRigth.nativeElement.setAttribute('style', 'display: none');
+      if (innerHeight < 900) {
+        this.siteLeft.nativeElement.setAttribute('style', 'height: 100%');
+      } else {
+        this.siteLeft.nativeElement.setAttribute('style', 'height: 80%');
+      }
       this.changeCloseTag('none', 'flex');
     }
   }
 
-  imgSmalHeight(){
-    if(window.innerWidth > 450){
-      this.siteImg.nativeElement.setAttribute('style', 'display: flex; height: 216px');
-    }else if(window.innerWidth < 450){
-      this.siteImg.nativeElement.setAttribute('style', 'display: flex; height: 190px');
-    }else if(window.innerWidth < 375){
-      this.siteImg.nativeElement.setAttribute('style', 'display: flex; height: 160px');
+  imgSmalHeight() {
+    if (window.innerWidth > 450) {
+      this.siteImg.nativeElement.setAttribute('style', 'display: flex; height: 190px; position: absolute; right: 20px; top: 20px');
+    } else if (window.innerWidth < 450) {
+      this.siteImg.nativeElement.setAttribute('style', 'display: flex; height: 100px; position: absolute; right: 20px; top: 20px');
+    } else if (window.innerWidth < 375) {
+      this.siteImg.nativeElement.setAttribute('style', 'display: flex; height: 80px; position: absolute; right: 20px; top: 20px');
     }
   }
 
-  highHeight(){
-      this.siteLeft.nativeElement.setAttribute('style', 'height: 540px');
-      this.siteRigth.nativeElement.setAttribute('style', 'display: flex');
-      if (window.innerHeight > 990 && window.innerWidth > 700 && window.innerWidth < 990) {
-        this.siteImg.nativeElement.setAttribute('style', 'display: flex; height: 216px');
-        this.showInfo.nativeElement.setAttribute('style', 'width: 470px; padding: 20px');
-      } else if (window.innerHeight > 990 && window.innerWidth < 700 && window.innerWidth > 400) {
-        this.showInfo.nativeElement.setAttribute('style', 'width: 85%; padding: 20px');
-        this.imgSmalHeight();
-      } else if (window.innerHeight < 990 && window.innerWidth < 400) {
-        this.showInfo.nativeElement.setAttribute('style', 'width: 85%; padding: 20px');
-        this.siteImg.nativeElement.setAttribute('style', 'display: flex; height: 190px');
-      }
+  highHeight() {
+    this.siteLeft.nativeElement.setAttribute('style', 'height: 540px');
+    this.siteRigth.nativeElement.setAttribute('style', 'display: flex');
+    if (window.innerHeight > 990 && window.innerWidth > 700 && window.innerWidth < 990) {
+      this.siteImg.nativeElement.setAttribute('style', 'display: flex; height: 216px');
+      this.showInfo.nativeElement.setAttribute('style', 'width: 470px; padding: 20px');
+    } else if (window.innerHeight > 990 && window.innerWidth < 700 && window.innerWidth > 400) {
+      this.showInfo.nativeElement.setAttribute('style', 'width: 85%; padding: 20px');
+      this.imgSmalHeight();
+    } else if (window.innerHeight < 990 && window.innerWidth < 400) {
+      this.showInfo.nativeElement.setAttribute('style', 'width: 85%; padding: 20px');
+      this.siteImg.nativeElement.setAttribute('style', 'display: flex; height: 190px');
+    }
   }
 
   changeAttribute(left: string, right: string, img: string, info: string) {
@@ -128,8 +153,8 @@ export class ProjectsComponent {
   }
 
   changeCloseTag(closeW: string, closeH: string) {
-    this.closeWidth.nativeElement.setAttribute('style', 'display:'+closeW+'');
-    this.closeHeight.nativeElement.setAttribute('style', 'display:'+closeH+'');
+    this.closeWidth.nativeElement.setAttribute('style', 'display:' + closeW + '');
+    this.closeHeight.nativeElement.setAttribute('style', 'display:' + closeH + '');
   }
 
   changeStyleImg(data: string) {
@@ -184,7 +209,7 @@ export class ProjectsComponent {
       this.codes = [1, 0, 5];
       this.nextPage = 'first';
     }
-
+    document.documentElement.style.overflowY = 'hidden';
     this.loadSite(number);
   }
 
@@ -201,6 +226,7 @@ export class ProjectsComponent {
   }
 
   closeInfo() {
+    document.documentElement.style.overflowY = '';
     this.info.nativeElement.setAttribute('style', 'display: none');
   }
 
