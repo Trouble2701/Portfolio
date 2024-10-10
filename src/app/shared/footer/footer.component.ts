@@ -1,5 +1,6 @@
 import { Component, ElementRef, inject, Input, ViewChild } from '@angular/core';
 import { DatabaseComponent } from '../../database/database.component';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-footer',
@@ -16,7 +17,7 @@ export class FooterComponent {
   @ViewChild('email') email: ElementRef | any;
   @ViewChild('imprint') imprint: ElementRef | any;
 
-  constructor() {
+  constructor(private router: Router) {
     setInterval(() => this.notice = this.database.legalNotice, 100);
   }
 
@@ -24,6 +25,7 @@ export class FooterComponent {
     window.scrollTo({
       top: 0,
     });
+    this.router.navigate(['/']);
   }
 
   showDot(data:string){
