@@ -1,13 +1,14 @@
-div{
+div {
     width: 90vw;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 50px;
-    padding: 30px;
+    padding: 5px;
 
-    .policy{
-        width: 1248px;
+    .policy {
+        max-width: 1248px;
+        width: 100%;
         display: flex;
         justify-content: flex-start;
         align-items: flex-start;
@@ -15,14 +16,30 @@ div{
         color: #FFFFFF;
         font-family: 'Fira Code';
 
-        .ds{
+        >h1 {
+            -moz-hyphens: auto;
+            -o-hyphens: auto;
+            -webkit-hyphens: auto;
+            -ms-hyphens: auto;
+            hyphens: auto;
+            font-size: 50px;
+        }
+
+        .ds {
             display: flex;
             justify-content: flex-start;
             align-items: flex-start;
             flex-direction: column;
             padding: 0;
+            text-wrap: wrap;
+            -moz-hyphens: auto;
+            -o-hyphens: auto;
+            -webkit-hyphens: auto;
+            -ms-hyphens: auto;
+            hyphens: auto;
         }
-        .back{
+
+        .back {
             text-decoration: none;
             width: 100px;
             height: 40px;
@@ -39,7 +56,7 @@ div{
             transition: all 125ms ease-in-out;
             cursor: pointer;
 
-            &:hover{
+            &:hover {
                 border-color: #3DCFB6;
                 color: #3DCFB6;
             }
@@ -47,17 +64,17 @@ div{
     }
 }
 
-.link{
+.link {
     text-decoration: none;
     color: #FFFFFF;
     transition: all 125ms ease-in-out;
 
-    &:hover{
+    &:hover {
         color: #3DCFB6;
     }
 }
 
-.navi{
+.navi {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -65,4 +82,24 @@ div{
     height: 100px;
     background-image: linear-gradient(55deg, #1C1C1C 40%, #08463B);
     margin: 0;
+}
+
+@media (max-width: 630px){
+    div{
+        .policy{
+            >h1{
+                font-size: 30px !important;
+            }
+        }
+    }
+}
+
+@media (max-width: 440px){
+    div{
+        .policy{
+            >h1{
+                font-size: 24px !important;
+            }
+        }
+    }
 }
