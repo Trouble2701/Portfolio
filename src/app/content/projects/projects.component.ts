@@ -76,47 +76,55 @@ export class ProjectsComponent {
 
   smalWidth() {
     if (window.innerHeight > 955) {
-      this.highHeight();
-      window.innerHeight > 985 ? this.changeCloseTag('flex', 'none') : this.changeCloseTag('none', 'flex');
-      this.showInfo.nativeElement.setAttribute('style', 'width: 85%; padding: 20px');
-      if (window.innerWidth < 480 && window.innerWidth > 409) {
-        this.siteImg.nativeElement.setAttribute('style', 'display: flex; height: 216px; position: absolute; right: 10px; top: 10px');
-      } else if(window.innerWidth < 410){
-        this.siteImg.nativeElement.setAttribute('style', 'display:flex; height: 160px');
-        this.showInfo.nativeElement.setAttribute('style', 'width: 80%; padding: 20px');
-      } else {
-        this.siteImg.nativeElement.setAttribute('style', 'display: flex; height: 300px');
-      }
+      this.heightBig()
     } else if (window.innerHeight <= 955) {
-      if (window.innerWidth > 700 && window.innerWidth < 990) {
-        this.siteImg.nativeElement.setAttribute('style', 'display: flex; height: 160px; position: absolute; right: 20px; top: 20px');
-        this.showInfo.nativeElement.setAttribute('style', 'width: 470px; padding: 20px');
-      } else if (window.innerWidth < 700 && window.innerWidth > 400) {
-        this.showInfo.nativeElement.setAttribute('style', 'width: 85%; padding: 20px');
-        this.imgSmalHeight();
-      } else if (window.innerWidth < 400) {
-        this.showInfo.nativeElement.setAttribute('style', 'width: 85%; padding: 20px');
-        if (window.innerHeight < 700) {
-          if (window.innerWidth < 400) {
-            this.siteImg.nativeElement.setAttribute('style', 'display: flex; height: 100px; position: absolute; right: 10px; top: 10px');
-          } else {
-            this.siteImg.nativeElement.setAttribute('style', 'display: flex; height: 100px; position: absolute; right: 20px; top: 20px');
-          }
-        } else {
-          if (window.innerWidth < 400) {
-            this.siteImg.nativeElement.setAttribute('style', 'display: flex; height: 100px; position: absolute; right: 0; top: 0');
-            this.siteRigth.nativeElement.setAttribute('style', 'display: flex; height: 130px');
-          } else {
-            this.siteImg.nativeElement.setAttribute('style', 'display: flex; height: 190px');
-          }
-        }
-      }
-      if (innerHeight < 900) {
-        this.siteLeft.nativeElement.setAttribute('style', 'height: 100%');
-      } else {
-        this.siteLeft.nativeElement.setAttribute('style', 'height: 80%');
-      }
+      this.heightSmal();
       this.changeCloseTag('none', 'flex');
+    }
+  }
+
+  heightBig() {
+    this.highHeight();
+    window.innerHeight > 985 ? this.changeCloseTag('flex', 'none') : this.changeCloseTag('none', 'flex');
+    this.showInfo.nativeElement.setAttribute('style', 'width: 85%; padding: 20px');
+    if (window.innerWidth < 480 && window.innerWidth > 409) {
+      this.siteImg.nativeElement.setAttribute('style', 'display: flex; height: 216px; position: absolute; right: 10px; top: 10px');
+    } else if (window.innerWidth < 410) {
+      this.siteImg.nativeElement.setAttribute('style', 'display:flex; height: 160px');
+      this.showInfo.nativeElement.setAttribute('style', 'width: 80%; padding: 20px');
+    } else {
+      this.siteImg.nativeElement.setAttribute('style', 'display: flex; height: 300px');
+    }
+  }
+
+  heightSmal() {
+    if (window.innerWidth > 700 && window.innerWidth < 990) {
+      this.siteImg.nativeElement.setAttribute('style', 'display: flex; height: 160px; position: absolute; right: 20px; top: 20px');
+      this.showInfo.nativeElement.setAttribute('style', 'width: 470px; padding: 20px');
+    } else if (window.innerWidth < 700 && window.innerWidth > 400) {
+      this.showInfo.nativeElement.setAttribute('style', 'width: 85%; padding: 20px');
+      this.imgSmalHeight();
+    } else if (window.innerWidth < 400) {
+      this.showInfo.nativeElement.setAttribute('style', 'width: 85%; padding: 20px');
+      this.widthSmal();
+    }
+    this.siteLeft.nativeElement.setAttribute('style', innerHeight < 900 ? 'height: 100%' : 'height: 80%');
+  }
+
+  widthSmal() {
+    if (window.innerHeight < 700) {
+      if (window.innerWidth < 400) {
+        this.siteImg.nativeElement.setAttribute('style', 'display: flex; height: 100px; position: absolute; right: 10px; top: 10px');
+      } else {
+        this.siteImg.nativeElement.setAttribute('style', 'display: flex; height: 100px; position: absolute; right: 20px; top: 20px');
+      }
+    } else {
+      if (window.innerWidth < 400) {
+        this.siteImg.nativeElement.setAttribute('style', 'display: flex; height: 100px; position: absolute; right: 0; top: 0');
+        this.siteRigth.nativeElement.setAttribute('style', 'display: flex; height: 130px');
+      } else {
+        this.siteImg.nativeElement.setAttribute('style', 'display: flex; height: 190px');
+      }
     }
   }
 
