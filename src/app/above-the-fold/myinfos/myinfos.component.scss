@@ -49,3 +49,10 @@
         }
     }
 }
+
+@media (max-width: 660px){
+    .marquee{
+        top: unset;
+        bottom: 40px;
+    }
+}

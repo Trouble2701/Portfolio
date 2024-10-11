@@ -2,7 +2,8 @@ div{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 900px;
+    max-height: 900px;
+    height: 100vh;
     width: 100vw;
     background-image: linear-gradient(55deg, #1C1C1C 40%, #08463B);
 }

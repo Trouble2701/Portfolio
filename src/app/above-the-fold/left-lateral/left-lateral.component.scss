@@ -29,3 +29,31 @@ div {
         left: 14.5px;
     }
 }
+
+@media (max-width: 660px){
+    div{
+        height: unset;
+
+        .scrollDown{
+            bottom: 200px;
+        }
+
+        .scrollDownLine{
+            height: 180px !important;
+        }
+    }
+}
+
+@media (max-height: 600px){
+    div{
+        height: unset;
+
+        .scrollDown{
+            bottom: 200px;
+        }
+
+        .scrollDownLine{
+            height: 180px !important;
+        }
+    }
+}

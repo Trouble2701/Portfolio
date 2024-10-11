@@ -5,7 +5,6 @@ div {
     flex-direction: column;
     gap: 24px;
     width: 32px;
-    height: 480px;
     position: relative;
     bottom: 0;
     z-index: 0;
@@ -20,7 +19,7 @@ div {
         width: 260px;
         height: 22px;
 
-        .contact{
+        .contact {
             color: #FFFFFF;
             font-family: 'Karla';
             font-weight: 400;
@@ -29,12 +28,12 @@ div {
             text-decoration: none;
             transition: all 125ms ease-in-out;
 
-            &:hover{
+            &:hover {
                 color: #3DCFB6;
             }
         }
 
-        .contactIMG{
+        .contactIMG {
             display: none;
         }
     }
@@ -86,7 +85,7 @@ div {
     left: 40px;
 }
 
-.dotLink{
+.dotLink {
     display: none;
     justify-content: center;
     align-items: center;
@@ -99,7 +98,7 @@ div {
     left: 40px;
 }
 
-.dotMail{
+.dotMail {
     display: none;
     justify-content: center;
     align-items: center;
@@ -112,23 +111,56 @@ div {
     left: 45px;
 }
 
-@media (max-width: 660px){
-div{
-    height: 330px;
+@media (max-width: 660px) {
+    div {
+        .email {
+            height: 40px;
+            width: 40px;
+            transform: rotate(0deg);
+            bottom: 210px;
 
-    .email{
-        height: 40px;
-        width: 40px;
-        transform: rotate(0deg);
-        bottom: 292px;
+            .contact {
+                display: none;
+            }
 
-        .contact{
-            display: none;
+            .contactIMG {
+                display: flex;
+            }
         }
-    
-        .contactIMG{
-            display: flex;
+
+        .links {
+            bottom: 125px;
+        }
+
+        .downLine {
+            height: 105px !important;
         }
     }
 }
+
+@media (max-height: 600px) {
+    div {
+        .email {
+            height: 40px;
+            width: 40px;
+            transform: rotate(0deg);
+            bottom: 210px;
+
+            .contact {
+                display: none;
+            }
+
+            .contactIMG {
+                display: flex;
+            }
+        }
+
+        .links {
+            bottom: 125px;
+        }
+
+        .downLine {
+            height: 105px !important;
+        }
+    }
 }

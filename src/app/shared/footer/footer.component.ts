@@ -41,4 +41,8 @@ export class FooterComponent {
     this.email.nativeElement.setAttribute('style', 'background-color: transparent');
     this.imprint.nativeElement.setAttribute('style', 'background-color: transparent');
   }
+
+  imprintOpen(){
+    this.router.navigate(['/imprint']);
+  }
 }

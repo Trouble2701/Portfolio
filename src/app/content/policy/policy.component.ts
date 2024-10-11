@@ -1,6 +1,7 @@
 import { Component, ElementRef, ViewChild, inject } from '@angular/core';
 import { DatabaseComponent } from '../../database/database.component';
 import { NavComponent } from '../../above-the-fold/nav/nav.component';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-policy',
@@ -22,7 +23,7 @@ export class PolicyComponent {
   direction: number = 1;
   fadeStart: number = 0;
 
-  constructor(){
+  constructor(private router: Router){
     setInterval(() => this.setLangPrivatePolicy(), 100);
   }
 

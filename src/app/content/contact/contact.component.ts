@@ -3,6 +3,7 @@ import { Component, ElementRef, Input, ViewChild, inject, Injectable } from '@an
 import { FormsModule, NgForm } from '@angular/forms';
 import { DatabaseComponent } from '../../database/database.component';
 import { HttpClient } from "@angular/common/http";
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-contact',
@@ -73,7 +74,7 @@ export class ContactComponent {
     },
   };
 
-  constructor() {
+  constructor(private router: Router) {
     setInterval(() => {
       this.setLang();
       this.setLangFaild();
@@ -238,5 +239,12 @@ export class ContactComponent {
     this.send.nativeElement.setAttribute('style', 'display:flex');
     this.disable = true;
     setTimeout(() => this.send.nativeElement.setAttribute('style', 'display:none'), 5000);
+  }
+
+  policy(){
+    window.scrollTo({
+      top: 0,
+    });
+    setTimeout(() => this.router.navigate(['/policy']), 200);
   }
 }

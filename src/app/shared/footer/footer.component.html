@@ -25,7 +25,7 @@
             </div>
             <div class="footerSiteLinks">
                 <div class="dot" #imprint></div>
-                <a href="/imprint" (mouseenter)="showDot('imprint')" (mouseleave)="showDontDot()" title="Show Impressum">{{notice}}</a>
+                <a (click)="imprintOpen()" (mouseenter)="showDot('imprint')" (mouseleave)="showDontDot()" title="Show Impressum">{{notice}}</a>
             </div>
         </div>
     </div>
