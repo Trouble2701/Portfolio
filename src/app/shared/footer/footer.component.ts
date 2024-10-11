@@ -1,11 +1,12 @@
-import { Component, ElementRef, inject, Input, ViewChild } from '@angular/core';
+import { Component, ElementRef, inject, Input, Renderer2, ViewChild } from '@angular/core';
 import { DatabaseComponent } from '../../database/database.component';
-import { Router } from '@angular/router';
+import {Router } from '@angular/router';
+import {CommonModule} from "@angular/common"
 
 @Component({
   selector: 'app-footer',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './footer.component.html',
   styleUrl: './footer.component.scss'
 })
@@ -16,9 +17,15 @@ export class FooterComponent {
   @ViewChild('link') link: ElementRef | any;
   @ViewChild('email') email: ElementRef | any;
   @ViewChild('imprint') imprint: ElementRef | any;
+  @Input() footer:string = '';
 
-  constructor(private router: Router) {
+  constructor(private router: Router, private render: Renderer2) {
     setInterval(() => this.notice = this.database.legalNotice, 100);
+    setInterval(() => this.checkLink(), 100);
+  }
+
+  checkLink(){
+    window.location.pathname == '/imprint' && window.innerHeight > 899 ? this.footer = 'posBottom' : this.footer = 'posUnset';
   }
 
   top() {

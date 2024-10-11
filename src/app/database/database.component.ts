@@ -149,6 +149,7 @@ projectsInfoThird = this.datas[this.toLang].projectsInfoThird;
 whoIam = this.datas[this.toLang].whoIam;
 technologies = this.datas[this.toLang].technologies;
 reviews = this.datas[this.toLang].reviews;
+site:string = '';
 
 sites = [
   {
