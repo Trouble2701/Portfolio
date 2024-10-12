@@ -141,10 +141,6 @@ section {
                     width: 64px;
                     height: 64px;
                     transition: all 125ms ease-in-out;
-
-                    &:hover {
-                        transform: scale(1.2) rotate(360deg);
-                    }
                 }
 
                 >span {

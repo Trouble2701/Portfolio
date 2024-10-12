@@ -65,36 +65,49 @@ export class SkillsComponent {
 
   popUp(){
     setInterval(() => {
-        this.elemScaleUp();
-      setTimeout(() => {
-        this.elemScaleDown();
-      }, 1000);
-    }, 5000);
+      this.elemScaleMiddle()
+      setTimeout(() => this.elemScaleUp(), 100);
+      setTimeout(() => this.elemScaleMiddle(), 200)
+      setTimeout(() => this.elemScaleDown(), 300);
+    }, 2500);
   }
 
   elemScaleUp(){
-    this.one.nativeElement.setAttribute('style', 'transform: scale(1.2) rotate(360deg);');
-    setTimeout(() => this.two.nativeElement.setAttribute('style', 'transform: scale(1.2) rotate(360deg);'), 100);
-    setTimeout(() => this.three.nativeElement.setAttribute('style', 'transform: scale(1.2) rotate(360deg);'), 200);
-    setTimeout(() => this.four.nativeElement.setAttribute('style', 'transform: scale(1.2) rotate(360deg);'), 300);
-    setTimeout(() => this.five.nativeElement.setAttribute('style', 'transform: scale(1.2) rotate(360deg);'), 400);
-    setTimeout(() => this.six.nativeElement.setAttribute('style', 'transform: scale(1.2) rotate(360deg);'), 500);
-    setTimeout(() => this.seven.nativeElement.setAttribute('style', 'transform: scale(1.2) rotate(360deg);'), 600);
-    setTimeout(() => this.eight.nativeElement.setAttribute('style', 'transform: scale(1.2) rotate(360deg);'), 700);
-    setTimeout(() => this.nine.nativeElement.setAttribute('style', 'transform: scale(1.2) rotate(360deg);'), 800);
-    setTimeout(() => this.ten.nativeElement.setAttribute('style', 'transform: scale(1.2) rotate(360deg);'), 900);
+    this.one.nativeElement.setAttribute('style', 'transform: scale(1.2)');
+    setTimeout(() => this.two.nativeElement.setAttribute('style', 'transform: scale(1.2)'), 100);
+    setTimeout(() => this.three.nativeElement.setAttribute('style', 'transform: scale(1.2)'), 200);
+    setTimeout(() => this.four.nativeElement.setAttribute('style', 'transform: scale(1.2)'), 300);
+    setTimeout(() => this.five.nativeElement.setAttribute('style', 'transform: scale(1.2)'), 400);
+    setTimeout(() => this.six.nativeElement.setAttribute('style', 'transform: scale(1.2)'), 500);
+    setTimeout(() => this.seven.nativeElement.setAttribute('style', 'transform: scale(1.2)'), 600);
+    setTimeout(() => this.eight.nativeElement.setAttribute('style', 'transform: scale(1.2)'), 700);
+    setTimeout(() => this.nine.nativeElement.setAttribute('style', 'transform: scale(1.2)'), 800);
+    setTimeout(() => this.ten.nativeElement.setAttribute('style', 'transform: scale(1.2)'), 900);
+  }
+
+  elemScaleMiddle(){
+    this.one.nativeElement.setAttribute('style', 'transform: scale(1.1)');
+    setTimeout(() => this.two.nativeElement.setAttribute('style', 'transform: scale(1.1)'), 100);
+    setTimeout(() => this.three.nativeElement.setAttribute('style', 'transform: scale(1.1)'), 200);
+    setTimeout(() => this.four.nativeElement.setAttribute('style', 'transform: scale(1.1)'), 300);
+    setTimeout(() => this.five.nativeElement.setAttribute('style', 'transform: scale(1.1)'), 400);
+    setTimeout(() => this.six.nativeElement.setAttribute('style', 'transform: scale(1.1)'), 500);
+    setTimeout(() => this.seven.nativeElement.setAttribute('style', 'transform: scale(1.1)'), 600);
+    setTimeout(() => this.eight.nativeElement.setAttribute('style', 'transform: scale(1.1)'), 700);
+    setTimeout(() => this.nine.nativeElement.setAttribute('style', 'transform: scale(1.1)'), 800);
+    setTimeout(() => this.ten.nativeElement.setAttribute('style', 'transform: scale(1.1)'), 900);
   }
 
   elemScaleDown(){
-    this.one.nativeElement.setAttribute('style', 'transform: scale(1) rotate(0deg);');
-    setTimeout(() => this.two.nativeElement.setAttribute('style', 'transform: scale(1) rotate(0deg);'), 100);
-    setTimeout(() => this.three.nativeElement.setAttribute('style', 'transform: scale(1) rotate(0deg);'), 200);
-    setTimeout(() => this.four.nativeElement.setAttribute('style', 'transform: scale(1) rotate(0deg);'), 300);
-    setTimeout(() => this.five.nativeElement.setAttribute('style', 'transform: scale(1) rotate(0deg);'), 400);
-    setTimeout(() => this.six.nativeElement.setAttribute('style', 'transform: scale(1) rotate(0deg);'), 500);
-    setTimeout(() => this.seven.nativeElement.setAttribute('style', 'transform: scale(1) rotate(0deg);'), 600);
-    setTimeout(() => this.eight.nativeElement.setAttribute('style', 'transform: scale(1) rotate(0deg);'), 700);
-    setTimeout(() => this.nine.nativeElement.setAttribute('style', 'transform: scale(1) rotate(0deg);'), 800);
-    setTimeout(() => this.ten.nativeElement.setAttribute('style', 'transform: scale(1) rotate(0deg);'), 900);
+    this.one.nativeElement.setAttribute('style', 'transform: scale(1)');
+    setTimeout(() => this.two.nativeElement.setAttribute('style', 'transform: scale(1)'), 100);
+    setTimeout(() => this.three.nativeElement.setAttribute('style', 'transform: scale(1)'), 200);
+    setTimeout(() => this.four.nativeElement.setAttribute('style', 'transform: scale(1)'), 300);
+    setTimeout(() => this.five.nativeElement.setAttribute('style', 'transform: scale(1)'), 400);
+    setTimeout(() => this.six.nativeElement.setAttribute('style', 'transform: scale(1)'), 500);
+    setTimeout(() => this.seven.nativeElement.setAttribute('style', 'transform: scale(1)'), 600);
+    setTimeout(() => this.eight.nativeElement.setAttribute('style', 'transform: scale(1)'), 700);
+    setTimeout(() => this.nine.nativeElement.setAttribute('style', 'transform: scale(1)'), 800);
+    setTimeout(() => this.ten.nativeElement.setAttribute('style', 'transform: scale(1)'), 900);
   }
 }

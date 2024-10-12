@@ -17,7 +17,7 @@ export class FooterComponent {
   @ViewChild('link') link: ElementRef | any;
   @ViewChild('email') email: ElementRef | any;
   @ViewChild('imprint') imprint: ElementRef | any;
-  @Input() footer:string = '';
+  @Input() footer:string = 'posBottom';
 
   constructor(private router: Router, private render: Renderer2) {
     setInterval(() => this.notice = this.database.legalNotice, 100);
