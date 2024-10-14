@@ -64,7 +64,7 @@ export class ContactComponent {
   }
   
   post = {
-    endPoint: 'https://sven-plankenbichler.de/sendmail.php',
+    endPoint: 'https://sven-plankenbichler.net/sendmail.php',
     body: (payload: any) => JSON.stringify(payload),
     options: {
       headers: {

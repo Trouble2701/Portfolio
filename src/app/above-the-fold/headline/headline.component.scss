@@ -144,3 +144,30 @@ div {
       }
     }
 }
+
+@media (max-height: 680px) {
+    div {
+        height: 260px;
+        >span{
+            font-size: 20px;
+        }
+        >div {
+            height: 200px;
+            >h1{
+                font-size: 40px;
+            }
+        }
+
+    }
+}
+
+@media (max-height: 450px) {
+    div {
+        >div {
+            >h1{
+                height: unset;
+            }
+        }
+
+    }
+}

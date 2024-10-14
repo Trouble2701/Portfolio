@@ -160,7 +160,7 @@ sites = [
       this.projectsInfoSecond,
       this.projectsInfoThird],
     siteLinksGit: ['https://github.com/ClaudiaDaneder/Join', 'https://github.com/Trouble2701/el-polo-loco', 'https://github.com/Trouble2701/pokedex'],
-    siteLinksTest: ['https://join.sven-plankenbichler.de', 'https://elpollo.sven-plankenbichler.de', 'https://pokedex.sven-plankenbichler.de'],
+    siteLinksTest: ['https://join.sven-plankenbichler.net', 'https://elpollo.sven-plankenbichler.net', 'https://pokedex.sven-plankenbichler.net'],
   }
 ];
 constructor() {

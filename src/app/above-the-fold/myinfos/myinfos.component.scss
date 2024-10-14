@@ -56,3 +56,10 @@
         bottom: 40px;
     }
 }
+
+@media (max-height: 900px){
+    .marquee{
+        top: unset;
+        bottom: 40px;
+    }
+}

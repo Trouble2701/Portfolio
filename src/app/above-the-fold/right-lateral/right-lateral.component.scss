@@ -164,3 +164,38 @@ div {
         }
     }
 }
+
+@media (max-height: 640px) {
+    div {
+        .email {
+            height: 40px;
+            width: 40px;
+            transform: rotate(0deg);
+            bottom: 290px;
+
+            .contact {
+                display: none;
+            }
+
+            .contactIMG {
+                display: flex;
+            }
+        }
+    }
+}
+
+@media (max-height: 600px) {
+    div {
+        .email {
+            bottom: 210px;
+        }
+    }
+}
+
+@media (max-height: 460px) {
+    div {
+        .email {
+            bottom: 210px;
+        }
+    }
+}

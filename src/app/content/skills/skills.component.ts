@@ -69,7 +69,7 @@ export class SkillsComponent {
       setTimeout(() => this.elemScaleUp(), 100);
       setTimeout(() => this.elemScaleMiddle(), 200)
       setTimeout(() => this.elemScaleDown(), 300);
-    }, 2500);
+    }, 5000);
   }
 
   elemScaleUp(){

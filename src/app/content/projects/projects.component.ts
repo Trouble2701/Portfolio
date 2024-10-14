@@ -230,7 +230,6 @@ export class ProjectsComponent {
     this.siteLinksGit = this.database.sites[0].siteLinksGit[number];
     this.siteLinksTest = this.database.sites[0].siteLinksTest[number];
     this.img = this.database.sites[0].img[number];
-    console.log(this.database.sites);
   }
 
   closeInfo() {

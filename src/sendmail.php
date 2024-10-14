@@ -32,8 +32,8 @@ switch ($_SERVER['REQUEST_METHOD']) {
             require 'PHPMailer-master/src/userdata.php';
 
             // Absender und Empfänger
-            $mail->setFrom('info@sven-plankenbichler.de', "$name über das Kontaktformular");
-            $mail->addAddress('info@sven-plankenbichler.de', 'Sven Plankenbichler'); // Empfänger hinzufügen
+            $mail->setFrom('contact@sven-plankenbichler.net', "$name über das Kontaktformular");
+            $mail->addAddress('developer@sven-plankenbichler.net', 'Sven Plankenbichler'); // Empfänger hinzufügen
 
             // E-Mail-Inhalt
             $mail->isHTML(true);                        // E-Mail im HTML-Format
