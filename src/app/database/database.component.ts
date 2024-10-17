@@ -108,15 +108,15 @@ export class DatabaseComponent {
           'Who I Am',
           'About Me',
           'Hello, my name is Sven and I am',
-          ' years. I am a frontend developer and live in Dresden. Motivated by the limitless possibilities within IT I look forward to creating visually captivating and intuitive websites and applications.',
+          ' years. I am a frontend developer and live in Dresden. Motivated by the limitless possibilities within IT, I look forward to creating visually captivating and intuitive websites and applications.',
           'I am flexible in terms of work environment and can work effectively both on-site in Dresden and remotely.',
-          'I am open-minded and always looking for personal challenges to constantly improve my knowledge and skills.',
-          "In my profession, programming isn't just about writing code, it's a creative form of problem-solving. I take pride in my ability to distill complex technical challenges into simple, user-friendly solutions. This way, I help you achieve your goals and bring your visions to life."
+          'I am open-minded and I like to face new challenges in order to constantly improve my knowledge and skills.',
+          "I see web application design as more than just programming; I see it as a creative way of solving problems. I am proud of my ability to transform complex technical challenges into appealing, user-friendly solutions. This is how I help you achieve your goals and bring your visions to life."
         ],
         technologies: [
           'Technologies',
           'Skill Set',
-          'During my journey at Developer Academy, I have learned to work extensively on various projects and use various frontend technologies and concepts. I am open to using new technologies and methodologies to continuously improve my skills and stay at the forefront in the ever-evolving landscape of web development.',
+          'During my time at the Developer Academy, I have acquired comprehensive knowledge and learned how to use various front-end technologies and concepts. I have a good command of various programming languages ​​and am confident in dealing with various databases.',
           'Have I piqued',
           'your interest?',
           'Please feel free to contact me. I look forward to contributing and expanding my existing knowledge.',
