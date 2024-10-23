@@ -107,10 +107,10 @@ export class DatabaseComponent {
         whoIam: [
           'Who I Am',
           'About Me',
-          'Hello, my name is Sven and I am',
+          'Hello, my name is Sven, and I am',
           ' years. I am a frontend developer and live in Dresden. Motivated by the limitless possibilities within IT, I look forward to creating visually captivating and intuitive websites and applications.',
           'I am flexible in terms of work environment and can work effectively both on-site in Dresden and remotely.',
-          'I am open-minded and I like to face new challenges in order to constantly improve my knowledge and skills.',
+          'I am open-minded, and I like to face new challenges in order to constantly improve my knowledge and skills.',
           "I see web application design as more than just programming; I see it as a creative way of solving problems. I am proud of my ability to transform complex technical challenges into appealing, user-friendly solutions. This is how I help you achieve your goals and bring your visions to life."
         ],
         technologies: [
