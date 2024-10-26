@@ -2,7 +2,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 1440px;
+    max-width: 1440px;
+    width: 100%;
     height: 62px;
     background: linear-gradient(to right, #142d2900 1%, #ffffff1f 20%, #ffffff1f 40%, #ffffff1f 60%, #ffffff1f 80%, #142d2900 100%);
     backdrop-filter: blur(5px);
